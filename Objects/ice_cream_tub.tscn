@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy2oghn4n4vp4"]
+
+[ext_resource type="Script" path="res://Objects/ice_cream_tub.gd" id="1_rbh82"]
+[ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/interactable.tscn" id="2_pwpct"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxel5"]
+
+[node name="IceCreamTub" type="Node2D"]
+script = ExtResource("1_rbh82")
+
+[node name="Interactable" parent="." instance=ExtResource("2_pwpct")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("RectangleShape2D_uxel5")
+metadata/_edit_lock_ = true

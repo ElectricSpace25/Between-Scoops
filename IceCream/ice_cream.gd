@@ -6,11 +6,8 @@ extends Node2D
 
 var scoops = 0
 
-func _ready():
-	add_scoop(3)
-	add_scoop(1)
-	add_scoop(2)
-	add_scoop(3)
+#func _ready():
+	#add_scoop(3)
 
 func add_scoop(flavor):
 	# 1 = Vanilla, 2 = Chocolate, 3 = Strawberry

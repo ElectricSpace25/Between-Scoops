@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://c8ldqs2ik8dbq"]
+[gd_scene load_steps=31 format=3 uid="uid://c8ldqs2ik8dbq"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_262ky"]
 [ext_resource type="Texture2D" uid="uid://daliokvbtgj7s" path="res://Player/PlayerWalking.png" id="1_ijcdi"]
+[ext_resource type="Script" path="res://Player/interaction_area.gd" id="3_lx3da"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7c3wq"]
 size = Vector2(16, 7)
@@ -238,6 +239,12 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_3cyv7")
 states/Walk/position = Vector2(441, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_hd6me"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_5a2hi"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_7jeaw")]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_prq3f"]
+radius = 16.0312
+
+[sub_resource type="LabelSettings" id="LabelSettings_e35g4"]
+font_size = 10
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_262ky")
 
@@ -260,3 +267,24 @@ parameters/Walk/blend_position = Vector2(-0.00158983, 0.925532)
 texture = ExtResource("1_ijcdi")
 hframes = 3
 vframes = 4
+
+[node name="InteractionArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_lx3da")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_prq3f")
+
+[node name="InteractLabel" type="Label" parent="."]
+offset_left = -19.0
+offset_top = -32.0
+offset_right = 21.0
+offset_bottom = -9.0
+text = "[E]"
+label_settings = SubResource("LabelSettings_e35g4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="InteractionArea" to="InteractionArea" method="_on_area_entered"]
+[connection signal="area_exited" from="InteractionArea" to="InteractionArea" method="_on_area_exited"]
