@@ -1,7 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://c8ldqs2ik8dbq"]
+[gd_scene load_steps=28 format=3 uid="uid://c8ldqs2ik8dbq"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_262ky"]
 [ext_resource type="Texture2D" uid="uid://daliokvbtgj7s" path="res://Player/PlayerWalking.png" id="1_ijcdi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7c3wq"]
+size = Vector2(16, 7)
 
 [sub_resource type="Animation" id="Animation_1rwp8"]
 resource_name = "walk_down"
@@ -238,6 +241,10 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_262ky")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 11)
+shape = SubResource("RectangleShape2D_7c3wq")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_cg0dg")
@@ -248,8 +255,6 @@ tree_root = SubResource("AnimationNodeStateMachine_253rf")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(-0.00158983, 0.925532)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ijcdi")
