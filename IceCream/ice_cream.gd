@@ -1,23 +1,31 @@
 extends Node2D
 
+@onready var cone = $Cone
 @onready var scoop1 = $Scoop1
 @onready var scoop2 = $Scoop2
 @onready var scoop3 = $Scoop3
 
-var scoops = 0
+var hasCone = false
+var scoops = []
+var toppings = []
 
-#func _ready():
-	#add_scoop(3)
+func add_cone():
+	hasCone = true
+	cone.frame = 1
 
 func add_scoop(flavor):
 	# 1 = Vanilla, 2 = Chocolate, 3 = Strawberry
-	if (scoops == 0):
-		scoop1.frame = flavor
-	elif (scoops == 1):
-		scoop2.frame = flavor
-	elif (scoops == 2):
-		scoop3.frame = flavor
+	if (hasCone):
+		if (scoops.size() == 0):
+			scoops.append(flavor)
+			scoop1.frame = flavor
+		elif (scoops.size() == 1):
+			scoops.append(flavor)
+			scoop2.frame = flavor
+		elif (scoops.size() == 2):
+			scoops.append(flavor)
+			scoop3.frame = flavor
+		else:
+			print("Max scoops reached!")
 	else:
-		print("Max scoops reached!")
-	
-	scoops += 1
+		print("No cone!")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cabv6yl4ij8tu"]
 
-[ext_resource type="Texture2D" uid="uid://bhe1jch6bnohe" path="res://IceCream/Cone.png" id="1_fv7sv"]
+[ext_resource type="Texture2D" uid="uid://cmsel7a7iv4n6" path="res://IceCream/Cone.png" id="1_fv7sv"]
 [ext_resource type="Script" path="res://IceCream/ice_cream.gd" id="1_y5p6p"]
 [ext_resource type="Texture2D" uid="uid://c486lj5fdc2th" path="res://IceCream/Scoop1.png" id="2_kecbo"]
 [ext_resource type="Texture2D" uid="uid://o6opmsn31ko3" path="res://IceCream/Scoop2.png" id="3_yyn4k"]
@@ -11,6 +11,7 @@ script = ExtResource("1_y5p6p")
 
 [node name="Cone" type="Sprite2D" parent="."]
 texture = ExtResource("1_fv7sv")
+hframes = 2
 
 [node name="Scoop1" type="Sprite2D" parent="."]
 texture = ExtResource("2_kecbo")
