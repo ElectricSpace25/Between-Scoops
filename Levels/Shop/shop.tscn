@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=4 uid="uid://dvd16v4poj8hh"]
 
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Player/player.tscn" id="1_e5fds"]
-[ext_resource type="Script" path="res://Levels/Shop/shop.gd" id="1_l5ag7"]
 [ext_resource type="Texture2D" uid="uid://3ep7dalg6pjy" path="res://Levels/Shop/ShopTileSet.png" id="2_jmbhc"]
 [ext_resource type="PackedScene" uid="uid://cabv6yl4ij8tu" path="res://IceCream/ice_cream.tscn" id="3_sutp4"]
 [ext_resource type="PackedScene" uid="uid://cy2oghn4n4vp4" path="res://Objects/ice_cream_tub.tscn" id="4_4ak0b"]
 [ext_resource type="PackedScene" uid="uid://owcjygqt8cnl" path="res://Objects/cone_dispenser.tscn" id="5_pgjp3"]
+[ext_resource type="Script" path="res://Levels/Shop/customer_area.gd" id="7_7mbdx"]
 [ext_resource type="PackedScene" uid="uid://d38ej1a1jhuag" path="res://Objects/trash.tscn" id="7_86lcm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pxtdm"]
@@ -32,7 +32,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_pxtdm")
 
 [node name="Shop" type="Node2D"]
-script = ExtResource("1_l5ag7")
 
 [node name="Player" parent="." instance=ExtResource("1_e5fds")]
 z_index = 1
@@ -70,3 +69,6 @@ position = Vector2(239, 192)
 
 [node name="Trash" parent="." instance=ExtResource("7_86lcm")]
 position = Vector2(352, 144)
+
+[node name="CustomerArea" type="Node2D" parent="."]
+script = ExtResource("7_7mbdx")
