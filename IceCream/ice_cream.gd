@@ -29,3 +29,11 @@ func add_scoop(flavor):
 			print("Max scoops reached!")
 	else:
 		print("No cone!")
+		
+func clear():
+	hasCone = false
+	cone.frame = 0
+	scoops.clear()
+	scoop1.frame = 0
+	scoop2.frame = 0
+	scoop3.frame = 0
