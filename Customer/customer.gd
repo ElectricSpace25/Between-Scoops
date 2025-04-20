@@ -17,5 +17,7 @@ func _ready():
 func _on_interact():
 	if player_ice_cream.hasCone && player_ice_cream.scoops == ice_cream.scoops:
 		print("Correct order!")
+		player_ice_cream.clear()
+		queue_free()
 	else:
 		print("Wrong order!")
