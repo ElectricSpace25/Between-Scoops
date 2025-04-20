@@ -17,6 +17,8 @@ func _ready():
 func _on_interact():
 	if player_ice_cream.hasCone && player_ice_cream.scoops == ice_cream.scoops:
 		print("Correct order!")
+		GlobalVariables.money += 1
+		print("Money: ", GlobalVariables.money)
 		player_ice_cream.clear()
 		get_parent().spawn_customer()
 		queue_free()

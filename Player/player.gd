@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var move_speed : float = 100
+var move_speed : float = 125
 
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
