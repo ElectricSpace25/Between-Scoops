@@ -28,3 +28,17 @@ position = Vector2(0, -51)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 shape = SubResource("RectangleShape2D_l111u")
+
+[node name="PatienceTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -14.0
+offset_top = -57.0
+offset_right = 14.0
+offset_bottom = -53.0
+max_value = 10.0
+show_percentage = false
+
+[connection signal="timeout" from="PatienceTimer" to="." method="_on_patience_timer_timeout"]
