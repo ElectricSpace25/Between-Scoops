@@ -16,14 +16,14 @@ func _ready():
 func _process(delta: float) -> void:
 	if (not level_timer.is_stopped()):
 		if (get_customer_count() < customer_max && spawn_timer.is_stopped()):
-			print("Starting spawn timer")
+			#print("Starting spawn timer")
 			spawn_timer.start(customer_spawn_time)
 	
 func attempt_spawn_customer():
-	print("Attemping customer spawn")
+	#print("Attemping customer spawn")
 	for slot in get_children():
 		if (slot.get_child_count() == 0):
-			print("Customer spawned")
+			#print("Customer spawned")
 			slot.spawn_customer()
 			break
 
@@ -35,7 +35,7 @@ func _on_level_timer_timeout():
 		slot.clear_customer()
 
 func _on_spawn_timer_timeout() -> void:
-	print("Spawning customer on timer")
+	#print("Spawning customer on timer")
 	attempt_spawn_customer()
 	
 func get_customer_count() -> int:

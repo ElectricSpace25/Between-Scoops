@@ -16,7 +16,6 @@ func _ready():
 	for i in range(num_of_scoops):
 		var flavor = (randi() % 3)
 		ice_cream.add_scoop(flavor)
-		print(flavor)
 	patience_timer.start(patience_time)
 	
 func _process(delta: float) -> void:
@@ -38,5 +37,5 @@ func _on_interact():
 		print("Wrong order!")
 
 func _on_patience_timer_timeout() -> void:
-	print("Customer got too impatient")
+	print("Customer got too impatient!")
 	queue_free()
