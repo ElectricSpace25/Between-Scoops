@@ -1,6 +1,6 @@
 extends Label
 
-@onready var timer : Timer = $"../../Timer"
+@onready var level_timer : Timer = $"../../LevelTimer"
 
 func _process(delta):
-	text = "Time: %d" % [int(timer.time_left)]
+	text = "Time: %d" % [ceil(level_timer.time_left)]

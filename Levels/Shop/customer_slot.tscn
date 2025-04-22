@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://iho0tr6xnpmf"]
+
+[ext_resource type="Script" path="res://Levels/Shop/customer_slot.gd" id="1_gcifs"]
+
+[node name="CustomerSlot" type="Node2D"]
+script = ExtResource("1_gcifs")

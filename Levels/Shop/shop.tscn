@@ -101,9 +101,14 @@ focus_mode = 0
 script = ExtResource("9_ismv7")
 transitioner = NodePath("../Transitioner")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="LevelTimer" type="Timer" parent="."]
 wait_time = 60.0
 one_shot = true
 
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="toggled" from="CanvasLayer/TransitionButton" to="CanvasLayer/TransitionButton" method="_on_toggled"]
-[connection signal="timeout" from="Timer" to="CustomerArea" method="_on_timer_timeout"]
+[connection signal="timeout" from="LevelTimer" to="CustomerArea" method="_on_level_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="CustomerArea" method="_on_spawn_timer_timeout"]

@@ -2,7 +2,8 @@ extends Node2D
 
 @onready var ice_cream = $IceCream
 @onready var interactable: Area2D = $Interactable
-@onready var player_ice_cream = $"../../Player/IceCream"
+@onready var player_ice_cream = $"../../../Player/IceCream"
+var slot = 0
 
 func _ready():
 	interactable.interact = _on_interact
@@ -20,7 +21,6 @@ func _on_interact():
 		GlobalVariables.money += 1
 		print("Money: ", GlobalVariables.money)
 		player_ice_cream.clear()
-		get_parent().spawn_customer()
 		queue_free()
 	else:
 		print("Wrong order!")
