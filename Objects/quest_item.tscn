@@ -1,16 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://x45p8t2ra6s3"]
+[gd_scene load_steps=3 format=3 uid="uid://x45p8t2ra6s3"]
 
 [ext_resource type="Script" path="res://Objects/quest_item.gd" id="1_ldsmt"]
-[ext_resource type="Texture2D" uid="uid://ccs45taj2aatu" path="res://Objects/book.png" id="2_jo5n4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sg712"]
 
 [node name="QuestItem" type="Area2D" groups=["QuestItem"]]
 script = ExtResource("1_ldsmt")
+item_texture = Object(GDScriptNativeClass,"script":null)
+
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -4)
-texture = ExtResource("2_jo5n4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_sg712")

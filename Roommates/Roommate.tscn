@@ -1,8 +1,13 @@
-[gd_scene load_steps=30 format=3 uid="uid://dpftuibgtewvt"]
+[gd_scene load_steps=32 format=3 uid="uid://dpftuibgtewvt"]
 
 [ext_resource type="Script" path="res://Roommates/roommate.gd" id="1_mmu20"]
 [ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/interactable.tscn" id="1_wls6k"]
 [ext_resource type="Texture2D" uid="uid://dqelm10xyjohs" path="res://Player/MC_IceCream_Spritesheet.png" id="2_jvth3"]
+[ext_resource type="Script" path="res://Resources/Dialogue/dialogue.gd" id="2_vk6sg"]
+
+[sub_resource type="Resource" id="Resource_2g4uk"]
+script = ExtResource("2_vk6sg")
+dialogues = {}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8481n"]
 
@@ -243,6 +248,9 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 
 [node name="Roommate" type="CharacterBody2D" groups=["NPC_Roommates"]]
 script = ExtResource("1_mmu20")
+roommate_id = "roommate_1"
+roommate_name = "Bella"
+dialogue_resource = SubResource("Resource_2g4uk")
 
 [node name="Interactable" parent="." instance=ExtResource("1_wls6k")]
 
