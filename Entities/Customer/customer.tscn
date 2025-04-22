@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/Interactable/interactable.tscn" id="5_rq3bf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l111u"]
+size = Vector2(32, 32)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg61i"]
 resource_local_to_scene = true
@@ -30,6 +31,7 @@ metadata/_edit_lock_ = true
 position = Vector2(0, -51)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2(0, 15)
 shape = SubResource("RectangleShape2D_l111u")
 
 [node name="PatienceTimer" type="Timer" parent="."]
