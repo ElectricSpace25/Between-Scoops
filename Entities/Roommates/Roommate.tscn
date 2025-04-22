@@ -1,14 +1,9 @@
-[gd_scene load_steps=33 format=3 uid="uid://dpftuibgtewvt"]
+[gd_scene load_steps=31 format=3 uid="uid://dpftuibgtewvt"]
 
-[ext_resource type="Script" path="res://Roommates/roommate.gd" id="1_7bbqo"]
-[ext_resource type="Script" path="res://Resources/Dialogue/dialogue.gd" id="2_y4c5v"]
+[ext_resource type="Script" path="res://Entities/Roommates/roommate.gd" id="1_21hc2"]
 [ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/Interactable/interactable.tscn" id="3_tg2fn"]
 [ext_resource type="Texture2D" uid="uid://dqelm10xyjohs" path="res://Entities/Player/MC_IceCream_Spritesheet.png" id="4_bxqq6"]
 [ext_resource type="PackedScene" uid="uid://b4ktadv6dqwuh" path="res://UI/Dialogue/dialogue_manager.tscn" id="5_nhlll"]
-
-[sub_resource type="Resource" id="Resource_2g4uk"]
-script = ExtResource("2_y4c5v")
-dialogues = {}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8481n"]
 
@@ -248,10 +243,7 @@ states/Walk/position = Vector2(441, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_hd6me"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_5a2hi"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_7jeaw")]
 
 [node name="Roommate" type="CharacterBody2D" groups=["NPC_Roommates"]]
-script = ExtResource("1_7bbqo")
-roommate_id = "roommate_1"
-roommate_name = "Bella"
-dialogue_resource = SubResource("Resource_2g4uk")
+script = ExtResource("1_21hc2")
 
 [node name="Interactable" parent="." instance=ExtResource("3_tg2fn")]
 

@@ -1,17 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://df7ttqtk6frc8"]
+[gd_scene load_steps=6 format=3 uid="uid://df7ttqtk6frc8"]
 
-[ext_resource type="PackedScene" uid="uid://dpftuibgtewvt" path="res://Roommates/roommate.tscn" id="1_a1d0b"]
+[ext_resource type="PackedScene" uid="uid://dpftuibgtewvt" path="res://Entities/Roommates/Roommate.tscn" id="1_a1d0b"]
+[ext_resource type="Script" path="res://Resources/Dialogue/dialogue.gd" id="2_dtgsd"]
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Entities/Player/player.tscn" id="3_5lqoc"]
+
+[sub_resource type="Resource" id="Resource_at6vb"]
+script = ExtResource("2_dtgsd")
+dialogues = {}
+
+[sub_resource type="Resource" id="Resource_l1mep"]
+script = ExtResource("2_dtgsd")
+dialogues = {}
 
 [node name="Apartment" type="Node2D"]
 
 [node name="Roommate" parent="." instance=ExtResource("1_a1d0b")]
 position = Vector2(29, 39)
+roommate_id = "roommate_1"
+roommate_name = "Bob"
+dialogue_resource = SubResource("Resource_at6vb")
 
 [node name="Roommate2" parent="." instance=ExtResource("1_a1d0b")]
 position = Vector2(195, 61)
 roommate_id = "roommate_2"
 roommate_name = "Anna"
+dialogue_resource = SubResource("Resource_l1mep")
 
 [node name="Player" parent="." instance=ExtResource("3_5lqoc")]
 position = Vector2(84, 81)
