@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://bvnxga24owger" path="res://UI/m3x6.ttf" id="4_65hvr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7c3wq"]
-size = Vector2(17, 6.5)
+size = Vector2(19, 6.5)
 
 [sub_resource type="Animation" id="Animation_fblil"]
 length = 0.001
