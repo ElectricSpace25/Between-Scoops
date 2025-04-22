@@ -1,12 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://df7ttqtk6frc8"]
 
-[ext_resource type="PackedScene" uid="uid://dpftuibgtewvt" path="res://Roommates/Roommate.tscn" id="1_a1d0b"]
+[ext_resource type="PackedScene" uid="uid://dpftuibgtewvt" path="res://Roommates/roommate.tscn" id="1_a1d0b"]
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Player/player.tscn" id="3_5lqoc"]
 
 [node name="Apartment" type="Node2D"]
 
 [node name="Roommate" parent="." instance=ExtResource("1_a1d0b")]
 position = Vector2(29, 39)
+
+[node name="Roommate2" parent="." instance=ExtResource("1_a1d0b")]
+position = Vector2(195, 61)
+roommate_id = "roommate_2"
+roommate_name = "Anna"
 
 [node name="Player" parent="." instance=ExtResource("3_5lqoc")]
 position = Vector2(84, 81)
