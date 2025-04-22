@@ -5,6 +5,16 @@ var move_speed : float = 125
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
 
+# Player HUD UI components
+@onready var icon: TextureRect = $HUD/Money/Icon
+@onready var amount: Label = $HUD/Money/Amount
+@onready var quest_tracker: ColorRect = $HUD/QuestTracker
+@onready var title: Label = $HUD/QuestTracker/VBoxContainer/Title
+@onready var objectives: VBoxContainer = $HUD/QuestTracker/VBoxContainer/Objectives
+
+func _ready() -> void:
+	quest_tracker.visible = false
+
 func _physics_process(_delta):
 	# Move
 	var input_direction = Input.get_vector("walk_left", "walk_right", "walk_up", "walk_down")

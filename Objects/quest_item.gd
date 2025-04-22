@@ -4,6 +4,7 @@
 extends Area2D
 
 @onready var sprite_2d = $Sprite2D
+@onready var interactable: Area2D = $Interactable
 
 # Vars
 @export var item_id: String = ""
@@ -14,8 +15,15 @@ extends Area2D
 func _ready():
 	if not Engine.is_editor_hint():
 		sprite_2d.texture = item_texture
+		interactable.interact = _on_interact
 
 # Show item texture in engine
 func _process(delta):
 	if Engine.is_editor_hint():
 		sprite_2d.texture = item_texture
+
+func _on_interact():
+	start_dialogue()
+
+func start_dialogue():
+	print("I am an item!")

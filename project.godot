@@ -19,6 +19,21 @@ config/icon="res://icon.svg"
 
 GlobalVariables="*res://global_variables.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://Levels/Apartment/": "blue",
+"res://Resources/": "blue",
+"res://Roommates/": "blue",
+"res://UI/": "blue",
+"res://UI/Dialogue/": "blue"
+}
+
 [input]
 
 walk_right={

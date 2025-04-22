@@ -1,0 +1,64 @@
+{
+	"roommate_1": {
+		"tree": [
+			{
+				"branch_id": "roommate_1_1",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "WAHH WAHHH",
+						"options": {
+							"What's wrong?": "story_1",
+							"I don't want to deal with this...": "exit",
+						}
+					},
+					{
+						"state": "story_1",
+						"text": "blah blah blah blah",
+						"options": {
+							"Alright, how are you?": "in_progress",
+							"Say Goodbye": "end_convo"
+						}
+					},
+					{
+						"state": "exit",
+						"text": "Oh...bye.",
+						"options": {}
+					},
+					{
+						"state": "end_convo",
+						"text": "Thanks for chatting with me.",
+						"options": {}
+					},
+				],
+			},
+			{
+				"branch_id": "roommate_2_1",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "You should go talk to roommate 1",
+						"options": {}
+					},
+				],
+			},
+		],
+	},
+	
+	"roommate_2": {
+		"tree": [
+			{
+				"branch_id": "roommate_2_1",
+				"dialogues": [],
+			},
+			{
+				"branch_id": "roommate_2_2",
+				"dialogues": [],
+			},
+			{
+				"branch_id": "roommate_2_default",
+				"dialogues": [],
+			},
+		],
+	},
+}

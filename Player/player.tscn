@@ -1,8 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://c8ldqs2ik8dbq"]
+[gd_scene load_steps=32 format=3 uid="uid://c8ldqs2ik8dbq"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_262ky"]
 [ext_resource type="Texture2D" uid="uid://dqelm10xyjohs" path="res://Player/MC_IceCream_Spritesheet.png" id="2_4sjg8"]
 [ext_resource type="Script" path="res://Player/interaction_area.gd" id="3_lx3da"]
+[ext_resource type="Texture2D" uid="uid://kfvcc61v05hw" path="res://UI/Dialogue/dollar_sign.png" id="4_ijt6o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7c3wq"]
 size = Vector2(17, 6.5)
@@ -285,6 +286,74 @@ text = "[E]"
 label_settings = SubResource("LabelSettings_e35g4")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Money" type="ColorRect" parent="HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -210.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 110.0
+grow_horizontal = 0
+color = Color(0.141176, 0.141176, 0.141176, 0.160784)
+
+[node name="Icon" type="TextureRect" parent="HUD/Money"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 19.0
+offset_right = 101.0
+offset_bottom = -17.0
+grow_vertical = 2
+texture = ExtResource("4_ijt6o")
+expand_mode = 2
+
+[node name="Amount" type="Label" parent="HUD/Money"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "0"
+
+[node name="QuestTracker" type="ColorRect" parent="HUD"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 210.0
+color = Color(0.141176, 0.141176, 0.141176, 0.160784)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/QuestTracker"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="HUD/QuestTracker/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Objectives" type="VBoxContainer" parent="HUD/QuestTracker/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 
 [connection signal="area_entered" from="InteractionArea" to="InteractionArea" method="_on_area_entered"]
 [connection signal="area_exited" from="InteractionArea" to="InteractionArea" method="_on_area_exited"]
