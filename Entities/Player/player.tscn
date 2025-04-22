@@ -1,8 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://c8ldqs2ik8dbq"]
+[gd_scene load_steps=32 format=3 uid="uid://c8ldqs2ik8dbq"]
 
 [ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_262ky"]
 [ext_resource type="Texture2D" uid="uid://dqelm10xyjohs" path="res://Entities/Player/MC_IceCream_Spritesheet.png" id="2_4sjg8"]
 [ext_resource type="Script" path="res://Entities/Player/interaction_area.gd" id="3_lx3da"]
+[ext_resource type="FontFile" uid="uid://bvnxga24owger" path="res://UI/m3x6.ttf" id="4_65hvr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7c3wq"]
 size = Vector2(17, 6.5)
@@ -243,7 +244,8 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 radius = 16.0312
 
 [sub_resource type="LabelSettings" id="LabelSettings_e35g4"]
-font_size = 10
+font = ExtResource("4_65hvr")
+shadow_color = Color(0, 0, 0, 0.145098)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_262ky")
@@ -277,10 +279,10 @@ script = ExtResource("3_lx3da")
 shape = SubResource("CircleShape2D_prq3f")
 
 [node name="InteractLabel" type="Label" parent="."]
-offset_left = -19.0
-offset_top = -32.0
-offset_right = 21.0
-offset_bottom = -9.0
+offset_left = -20.0
+offset_top = -34.0
+offset_right = 20.0
+offset_bottom = -11.0
 text = "[E]"
 label_settings = SubResource("LabelSettings_e35g4")
 horizontal_alignment = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dvd16v4poj8hh"]
+[gd_scene load_steps=17 format=4 uid="uid://dvd16v4poj8hh"]
 
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Entities/Player/player.tscn" id="1_e5fds"]
 [ext_resource type="Texture2D" uid="uid://3ep7dalg6pjy" path="res://Levels/Shop/ShopTileSet.png" id="2_jmbhc"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d38ej1a1jhuag" path="res://Objects/Trash/trash.tscn" id="7_86lcm"]
 [ext_resource type="Script" path="res://Levels/Shop/timer_label.gd" id="8_fktjj"]
 [ext_resource type="PackedScene" uid="uid://cymdec3ilt4i0" path="res://UI/transitioner.tscn" id="8_mowwh"]
+[ext_resource type="FontFile" uid="uid://bvnxga24owger" path="res://UI/m3x6.ttf" id="8_q1f54"]
 [ext_resource type="Script" path="res://Levels/Shop/money_label.gd" id="9_eikm8"]
 [ext_resource type="Script" path="res://Levels/Shop/TransitionButton.gd" id="9_ismv7"]
 
@@ -25,6 +26,16 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_pxtdm")
+
+[sub_resource type="LabelSettings" id="LabelSettings_0tqm5"]
+font = ExtResource("8_q1f54")
+font_size = 48
+shadow_color = Color(0, 0, 0, 0.145098)
+
+[sub_resource type="LabelSettings" id="LabelSettings_slvxm"]
+font = ExtResource("8_q1f54")
+font_size = 48
+shadow_color = Color(0, 0, 0, 0.145098)
 
 [node name="Shop" type="Node2D"]
 
@@ -72,28 +83,30 @@ script = ExtResource("7_7mbdx")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TimerLabel" type="Label" parent="CanvasLayer"]
-offset_left = 4.0
-offset_top = 6.0
-offset_right = 96.0
-offset_bottom = 29.0
+offset_left = 8.0
+offset_top = -8.0
+offset_right = 100.0
+offset_bottom = 30.0
 text = "Time: "
+label_settings = SubResource("LabelSettings_0tqm5")
 script = ExtResource("8_fktjj")
 
 [node name="MoneyLabel" type="Label" parent="CanvasLayer"]
-offset_left = 4.0
-offset_top = 27.0
-offset_right = 66.0
-offset_bottom = 50.0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 95.0
+offset_bottom = 62.0
 text = "Money: "
+label_settings = SubResource("LabelSettings_slvxm")
 script = ExtResource("9_eikm8")
 
 [node name="Transitioner" parent="CanvasLayer" instance=ExtResource("8_mowwh")]
+visible = false
 
 [node name="TransitionButton" type="CheckButton" parent="CanvasLayer" node_paths=PackedStringArray("transitioner")]
-offset_left = 3.0
-offset_top = 48.0
-offset_right = 47.0
-offset_bottom = 72.0
+offset_top = 64.0
+offset_right = 44.0
+offset_bottom = 88.0
 focus_mode = 0
 script = ExtResource("9_ismv7")
 transitioner = NodePath("../Transitioner")
