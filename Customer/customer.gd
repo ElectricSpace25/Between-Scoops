@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var ice_cream = $IceCream
 @onready var interactable: Area2D = $Interactable
-@onready var player_ice_cream = $"../../IceCream"
+@onready var player_ice_cream = $"../../Player/IceCream"
 
 func _ready():
 	interactable.interact = _on_interact
