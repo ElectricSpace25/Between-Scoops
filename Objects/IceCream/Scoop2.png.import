@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmsel7a7iv4n6"
-path="res://.godot/imported/Cone.png-e946890bef5a4eab5bb6e77120e2e28b.ctex"
+uid="uid://o6opmsn31ko3"
+path="res://.godot/imported/Scoop2.png-19c310a64425fd8560dabb8f755d46ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://IceCream/Cone.png"
-dest_files=["res://.godot/imported/Cone.png-e946890bef5a4eab5bb6e77120e2e28b.ctex"]
+source_file="res://Objects/IceCream/Scoop2.png"
+dest_files=["res://.godot/imported/Scoop2.png-19c310a64425fd8560dabb8f755d46ae.ctex"]
 
 [params]
 

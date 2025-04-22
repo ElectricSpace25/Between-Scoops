@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var level_timer: Timer = $"../LevelTimer"
 @onready var spawn_timer: Timer = $"../SpawnTimer"
-var customer_slot_scene = load("res://Levels/Shop/customer_slot.tscn")
+var customer_slot_scene = load("res://Components/CustomerSlot/customer_slot.tscn")
 
 func _ready():
 	level_timer.start(60)

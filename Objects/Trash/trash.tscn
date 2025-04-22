@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d38ej1a1jhuag"]
 
-[ext_resource type="Script" path="res://Objects/trash.gd" id="1_6jptk"]
-[ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/interactable.tscn" id="2_ehkag"]
+[ext_resource type="Script" path="res://Objects/Trash/trash.gd" id="1_6jptk"]
+[ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/Interactable/interactable.tscn" id="2_ehkag"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j75ou"]
 

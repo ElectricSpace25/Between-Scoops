@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://3lhsym8iwydb"]
 
-[ext_resource type="Script" path="res://Customer/customer.gd" id="1_3kdvp"]
-[ext_resource type="Texture2D" uid="uid://rlsdwslh7chl" path="res://Customer/Customer.png" id="1_qt00p"]
-[ext_resource type="PackedScene" uid="uid://cabv6yl4ij8tu" path="res://IceCream/ice_cream.tscn" id="2_n6jdd"]
-[ext_resource type="Texture2D" uid="uid://yjafyfc4t2q2" path="res://Customer/Bubble.png" id="3_nyt2s"]
-[ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/interactable.tscn" id="5_rq3bf"]
+[ext_resource type="Script" path="res://Entities/Customer/customer.gd" id="1_3kdvp"]
+[ext_resource type="Texture2D" uid="uid://rlsdwslh7chl" path="res://Entities/Customer/Customer.png" id="1_qt00p"]
+[ext_resource type="PackedScene" uid="uid://cabv6yl4ij8tu" path="res://Objects/IceCream/ice_cream.tscn" id="2_n6jdd"]
+[ext_resource type="Texture2D" uid="uid://yjafyfc4t2q2" path="res://Entities/Customer/Bubble.png" id="3_nyt2s"]
+[ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/Interactable/interactable.tscn" id="5_rq3bf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l111u"]
 

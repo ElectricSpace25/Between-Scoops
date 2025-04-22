@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o6opmsn31ko3"
-path="res://.godot/imported/Scoop2.png-567190e14a77f4660a86ad536612965f.ctex"
+uid="uid://rlsdwslh7chl"
+path="res://.godot/imported/Customer.png-5f94a74099ab6adf4772000c3b2f847d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://IceCream/Scoop2.png"
-dest_files=["res://.godot/imported/Scoop2.png-567190e14a77f4660a86ad536612965f.ctex"]
+source_file="res://Entities/Customer/Customer.png"
+dest_files=["res://.godot/imported/Customer.png-5f94a74099ab6adf4772000c3b2f847d.ctex"]
 
 [params]
 

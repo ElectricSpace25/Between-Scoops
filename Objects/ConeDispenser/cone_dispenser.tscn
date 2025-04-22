@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://owcjygqt8cnl"]
 
-[ext_resource type="Script" path="res://Objects/cone_dispenser.gd" id="1_lmrn5"]
-[ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/interactable.tscn" id="2_qdfvi"]
+[ext_resource type="Script" path="res://Objects/ConeDispenser/cone_dispenser.gd" id="1_lmrn5"]
+[ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/Interactable/interactable.tscn" id="2_qdfvi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dgxkk"]
 

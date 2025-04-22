@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqelm10xyjohs"
-path="res://.godot/imported/MC_IceCream_Spritesheet.png-3e52b9038a9cd68a88f3db2bcfbcd604.ctex"
+uid="uid://dhorgav23ywpo"
+path="res://.godot/imported/Scoop3.png-708e0d967635fc86cdcc20b8d65b23f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/MC_IceCream_Spritesheet.png"
-dest_files=["res://.godot/imported/MC_IceCream_Spritesheet.png-3e52b9038a9cd68a88f3db2bcfbcd604.ctex"]
+source_file="res://Objects/IceCream/Scoop3.png"
+dest_files=["res://.godot/imported/Scoop3.png-708e0d967635fc86cdcc20b8d65b23f6.ctex"]
 
 [params]
 
