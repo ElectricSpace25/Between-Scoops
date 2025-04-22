@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://dvd16v4poj8hh"]
+[gd_scene load_steps=12 format=4 uid="uid://dvd16v4poj8hh"]
 
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Player/player.tscn" id="1_e5fds"]
 [ext_resource type="Texture2D" uid="uid://3ep7dalg6pjy" path="res://Levels/Shop/ShopTileSet.png" id="2_jmbhc"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cy2oghn4n4vp4" path="res://Objects/ice_cream_tub.tscn" id="4_4ak0b"]
 [ext_resource type="PackedScene" uid="uid://owcjygqt8cnl" path="res://Objects/cone_dispenser.tscn" id="5_pgjp3"]
 [ext_resource type="Script" path="res://Levels/Shop/customer_area.gd" id="7_7mbdx"]
-[ext_resource type="PackedScene" uid="uid://d38ej1a1jhuag" path="res://Objects/trash.tscn" id="7_86lcm"]
+[ext_resource type="PackedScene" path="res://Objects/trash.tscn" id="7_86lcm"]
+[ext_resource type="PackedScene" uid="uid://cymdec3ilt4i0" path="res://UI/transitioner.tscn" id="8_mowwh"]
+[ext_resource type="Script" path="res://Levels/Shop/TransitionButton.gd" id="9_ismv7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pxtdm"]
 texture = ExtResource("2_jmbhc")
@@ -72,3 +74,16 @@ position = Vector2(352, 144)
 
 [node name="CustomerArea" type="Node2D" parent="."]
 script = ExtResource("7_7mbdx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transitioner" parent="CanvasLayer" instance=ExtResource("8_mowwh")]
+
+[node name="TransitionButton" type="CheckButton" parent="CanvasLayer" node_paths=PackedStringArray("transitioner")]
+offset_right = 44.0
+offset_bottom = 24.0
+focus_mode = 0
+script = ExtResource("9_ismv7")
+transitioner = NodePath("../Transitioner")
+
+[connection signal="toggled" from="CanvasLayer/TransitionButton" to="CanvasLayer/TransitionButton" method="_on_toggled"]

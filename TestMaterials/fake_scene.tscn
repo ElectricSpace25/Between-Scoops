@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://6brucmpu7rgx"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_j7gem"]
+
+[node name="fake_scene" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 78.0
+offset_top = 69.0
+offset_right = 184.0
+offset_bottom = 165.0
+texture = SubResource("CanvasTexture_j7gem")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+self_modulate = Color(1, 0.0941176, 1, 1)
+offset_left = 406.0
+offset_top = 261.0
+offset_right = 512.0
+offset_bottom = 357.0
+texture = SubResource("CanvasTexture_j7gem")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "This is a fake scene for testing purposes"
