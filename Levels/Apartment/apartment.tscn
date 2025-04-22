@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://df7ttqtk6frc8"]
 
 [ext_resource type="PackedScene" uid="uid://dpftuibgtewvt" path="res://Roommates/roommate.tscn" id="1_a1d0b"]
-[ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Player/player.tscn" id="3_5lqoc"]
+[ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Entities/Player/player.tscn" id="3_5lqoc"]
 
 [node name="Apartment" type="Node2D"]
 

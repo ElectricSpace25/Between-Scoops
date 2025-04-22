@@ -7,8 +7,6 @@ var can_move = true # added to pause movement when interacting with roommates
 @onready var state_machine = animation_tree.get("parameters/playback")
 
 # Player HUD UI components
-@onready var icon: TextureRect = $HUD/Money/Icon
-@onready var amount: Label = $HUD/Money/Amount
 @onready var quest_tracker: ColorRect = $HUD/QuestTracker
 @onready var title: Label = $HUD/QuestTracker/VBoxContainer/Title
 @onready var objectives: VBoxContainer = $HUD/QuestTracker/VBoxContainer/Objectives

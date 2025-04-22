@@ -1,16 +1,8 @@
-[gd_scene load_steps=33 format=3 uid="uid://dpftuibgtewvt"]
+[gd_scene load_steps=31 format=3 uid="uid://errdfekrmt46"]
 
-[ext_resource type="Script" path="res://Roommates/roommate.gd" id="1_7bbqo"]
-[ext_resource type="Script" path="res://Resources/Dialogue/dialogue.gd" id="2_y4c5v"]
-[ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/interactable.tscn" id="3_tg2fn"]
-[ext_resource type="Texture2D" uid="uid://dqelm10xyjohs" path="res://Player/MC_IceCream_Spritesheet.png" id="4_bxqq6"]
-[ext_resource type="PackedScene" uid="uid://b4ktadv6dqwuh" path="res://UI/Dialogue/dialogue_manager.tscn" id="5_nhlll"]
-
-[sub_resource type="Resource" id="Resource_2g4uk"]
-script = ExtResource("2_y4c5v")
-dialogues = {}
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_8481n"]
+[ext_resource type="Script" path="res://Player/player.gd" id="1_nqmdd"]
+[ext_resource type="Texture2D" path="res://Player/MC_IceCream_Spritesheet.png" id="2_yi0tj"]
+[ext_resource type="Script" path="res://Player/interaction_area.gd" id="3_xdlgx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7c3wq"]
 size = Vector2(17, 6.5)
@@ -247,16 +239,14 @@ states/Walk/node = SubResource("AnimationNodeBlendSpace2D_3cyv7")
 states/Walk/position = Vector2(441, 100)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_hd6me"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_5a2hi"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_7jeaw")]
 
-[node name="Roommate" type="CharacterBody2D" groups=["NPC_Roommates"]]
-script = ExtResource("1_7bbqo")
-roommate_id = "roommate_1"
-roommate_name = "Bella"
-dialogue_resource = SubResource("Resource_2g4uk")
+[sub_resource type="CircleShape2D" id="CircleShape2D_prq3f"]
+radius = 16.0312
 
-[node name="Interactable" parent="." instance=ExtResource("3_tg2fn")]
+[sub_resource type="LabelSettings" id="LabelSettings_e35g4"]
+font_size = 10
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
-shape = SubResource("CircleShape2D_8481n")
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_nqmdd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 10.75)
@@ -274,16 +264,58 @@ parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(-0.00158983, 0.925532)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("4_bxqq6")
+texture = ExtResource("2_yi0tj")
 hframes = 4
 vframes = 8
 
-[node name="Label" type="Label" parent="."]
-offset_left = -23.0
-offset_top = -27.0
-offset_right = 63.0
-offset_bottom = -4.0
-theme_override_font_sizes/font_size = 10
-text = "Roommate"
+[node name="InteractionArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_xdlgx")
 
-[node name="DialogueManager" parent="." instance=ExtResource("5_nhlll")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_prq3f")
+
+[node name="InteractLabel" type="Label" parent="."]
+offset_left = -19.0
+offset_top = -32.0
+offset_right = 21.0
+offset_bottom = -9.0
+text = "[E]"
+label_settings = SubResource("LabelSettings_e35g4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HUD" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="QuestTracker" type="ColorRect" parent="HUD"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 210.0
+color = Color(0.141176, 0.141176, 0.141176, 0.160784)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/QuestTracker"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="HUD/QuestTracker/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Objectives" type="VBoxContainer" parent="HUD/QuestTracker/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="area_entered" from="InteractionArea" to="InteractionArea" method="_on_area_entered"]
+[connection signal="area_exited" from="InteractionArea" to="InteractionArea" method="_on_area_exited"]

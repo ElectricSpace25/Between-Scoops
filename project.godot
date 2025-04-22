@@ -27,9 +27,9 @@ window/stretch/aspect="expand"
 [file_customization]
 
 folder_colors={
+"res://Entities/Roommates/": "blue",
 "res://Levels/Apartment/": "blue",
 "res://Resources/": "blue",
-"res://Roommates/": "blue",
 "res://UI/": "blue",
 "res://UI/Dialogue/": "blue"
 }
