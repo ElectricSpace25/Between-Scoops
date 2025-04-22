@@ -8,4 +8,4 @@ func _ready():
 	
 func _on_interact():
 	ice_cream.add_cone()
-	print("Cone added")
+	#print("Cone added")

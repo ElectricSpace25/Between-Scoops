@@ -11,4 +11,4 @@ func _ready():
 	
 func _on_interact():
 	ice_cream.add_scoop(flavor)
-	print("Flavor ", flavor, " scoop added")
+	#print("Flavor ", flavor, " scoop added")
