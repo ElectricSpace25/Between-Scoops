@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://3lhsym8iwydb"]
+[gd_scene load_steps=7 format=3 uid="uid://3lhsym8iwydb"]
 
 [ext_resource type="Script" path="res://Entities/Customer/customer.gd" id="1_3kdvp"]
 [ext_resource type="Texture2D" uid="uid://rlsdwslh7chl" path="res://Entities/Customer/Customer.png" id="1_qt00p"]
@@ -7,9 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/Interactable/interactable.tscn" id="5_rq3bf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l111u"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg61i"]
-resource_local_to_scene = true
 
 [node name="Customer" type="Node2D"]
 script = ExtResource("1_3kdvp")
@@ -42,8 +39,8 @@ offset_left = -14.0
 offset_top = -57.0
 offset_right = 14.0
 offset_bottom = -53.0
-theme_override_styles/fill = SubResource("StyleBoxFlat_bg61i")
 max_value = 10.0
+step = 1.0
 show_percentage = false
 
 [connection signal="timeout" from="PatienceTimer" to="." method="_on_patience_timer_timeout"]
