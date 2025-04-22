@@ -18,13 +18,13 @@ func add_scoop(flavor):
 	if (hasCone):
 		if (scoops.size() == 0):
 			scoops.append(flavor)
-			scoop1.frame = flavor
+			scoop1.frame = flavor+1
 		elif (scoops.size() == 1):
 			scoops.append(flavor)
-			scoop2.frame = flavor
+			scoop2.frame = flavor+1
 		elif (scoops.size() == 2):
 			scoops.append(flavor)
-			scoop3.frame = flavor
+			scoop3.frame = flavor+1
 		else:
 			print("Max scoops reached!")
 	else:

@@ -14,8 +14,9 @@ func _ready():
 	ice_cream.add_cone()
 	var num_of_scoops = (randi() % 3) + 1
 	for i in range(num_of_scoops):
-		var flavor = (randi() % 3) + 1
+		var flavor = (randi() % 3)
 		ice_cream.add_scoop(flavor)
+		print(flavor)
 	patience_timer.start(patience_time)
 	
 func _process(delta: float) -> void:

@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy2oghn4n4vp4"]
+[gd_scene load_steps=5 format=3 uid="uid://cy2oghn4n4vp4"]
 
 [ext_resource type="Script" path="res://Objects/IceCreamTub/ice_cream_tub.gd" id="1_rbh82"]
 [ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/Interactable/interactable.tscn" id="2_pwpct"]
+[ext_resource type="Texture2D" uid="uid://x53rqp5esl4d" path="res://Objects/IceCreamTub/IceCreamTub.png" id="3_aa8uf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uxel5"]
+size = Vector2(32, 32)
 
 [node name="IceCreamTub" type="Node2D"]
 script = ExtResource("1_rbh82")
@@ -13,3 +15,7 @@ script = ExtResource("1_rbh82")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 shape = SubResource("RectangleShape2D_uxel5")
 metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_aa8uf")
+hframes = 5
