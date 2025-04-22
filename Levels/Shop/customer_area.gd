@@ -11,7 +11,7 @@ func _ready():
 	for i in range(3):
 		var new_slot = customer_slot_scene.instantiate()
 		add_child(new_slot)
-		new_slot.position = Vector2i(272+(32*i), 244)
+		new_slot.position.x += 32*i
 	
 func _process(delta: float) -> void:
 	if (not level_timer.is_stopped()):
