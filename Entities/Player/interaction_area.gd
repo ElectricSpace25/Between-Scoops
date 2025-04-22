@@ -14,6 +14,9 @@ func _input(event: InputEvent) -> void:
 func _process(_delta: float) -> void:
 	if current_interactions and can_interact:
 		current_interactions.sort_custom((_sort_by_nearest))
+		for interaction in current_interactions:
+			interaction.get_parent().modulate = Color(1, 1, 1)
+		current_interactions[0].get_parent().modulate = Color(1.1, 1.1, 1.1)
 		interact_label.show()
 	else:
 		interact_label.hide()
@@ -28,3 +31,4 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _on_area_exited(area: Area2D) -> void:
 	current_interactions.erase(area)
+	area.get_parent().modulate = Color(1, 1, 1)
