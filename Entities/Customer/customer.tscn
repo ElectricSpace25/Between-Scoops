@@ -34,6 +34,7 @@ wait_time = 10.0
 one_shot = true
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
+z_index = 1
 offset_left = -14.0
 offset_top = -57.0
 offset_right = 14.0

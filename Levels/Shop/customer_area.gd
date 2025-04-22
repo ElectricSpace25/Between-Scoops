@@ -3,6 +3,8 @@ extends Node2D
 @onready var level_timer: Timer = $"../LevelTimer"
 @onready var spawn_timer: Timer = $"../SpawnTimer"
 var customer_slot_scene = load("res://Components/CustomerSlot/customer_slot.tscn")
+var customer_max = 2
+var customer_spawn_time = 4
 
 func _ready():
 	level_timer.start(60)
@@ -13,9 +15,9 @@ func _ready():
 	
 func _process(delta: float) -> void:
 	if (not level_timer.is_stopped()):
-		if (get_customer_count() < 3 && spawn_timer.is_stopped()):
+		if (get_customer_count() < customer_max && spawn_timer.is_stopped()):
 			print("Starting spawn timer")
-			spawn_timer.start()
+			spawn_timer.start(customer_spawn_time)
 	
 func attempt_spawn_customer():
 	print("Attemping customer spawn")
