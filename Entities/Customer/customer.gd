@@ -5,7 +5,7 @@ extends Node2D
 @onready var player_ice_cream = $"../../../Player/IceCream"
 @onready var patience_timer: Timer = $PatienceTimer
 @onready var patience_bar: ProgressBar = $ProgressBar
-var patience_time = 10
+var patience_time = 15
 
 func _ready():
 	interactable.interact = _on_interact
@@ -15,23 +15,18 @@ func _ready():
 	# Set variables depending on day
 	match GlobalVariables.day:
 		1:
-			patience_time = 10
 			available_flavors = 3
 			available_toppings = 0
 		2:
-			patience_time = 10
 			available_flavors = 4
 			available_toppings = 0
 		3:
-			patience_time = 10
 			available_flavors = 4
 			available_toppings = 1
 		4:
-			patience_time = 10
 			available_flavors = 5
 			available_toppings = 1
 		5:
-			patience_time = 10
 			available_flavors = 5
 			available_toppings = 2
 

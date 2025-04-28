@@ -21,6 +21,15 @@ func set_difficulty():
 			customer_spawn_time = 5
 		2:
 			customer_max = 2
+			customer_spawn_time = 4
+		3:
+			customer_max = 3
+			customer_spawn_time = 4
+		4:
+			customer_max = 3
+			customer_spawn_time = 3
+		5:
+			customer_max = 3
 			customer_spawn_time = 3
 	
 func _process(delta: float) -> void:
