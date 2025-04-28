@@ -16,6 +16,10 @@ func _ready():
 	for i in range(num_of_scoops):
 		var flavor = (randi() % 3)
 		ice_cream.add_scoop(flavor)
+	var num_of_toppings = (randi() % 3)
+	for i in range(num_of_toppings):
+		var type = (randi() % 2)
+		ice_cream.add_topping(type)
 	patience_timer.start(patience_time)
 	
 func _process(delta: float) -> void:
@@ -28,7 +32,13 @@ func _process(delta: float) -> void:
 		patience_bar.get("theme_override_styles/fill").bg_color = Color.DARK_GREEN
 	
 func _on_interact():
-	if player_ice_cream.hasCone && player_ice_cream.scoops == ice_cream.scoops:
+	# Sort toppings to disregard list order
+	var player_toppings = player_ice_cream.toppings.duplicate()
+	var customer_toppings = ice_cream.toppings.duplicate()
+	player_toppings.sort()
+	customer_toppings.sort()
+	
+	if player_ice_cream.hasCone && player_ice_cream.scoops == ice_cream.scoops && player_toppings == customer_toppings:
 		#print("Correct order!")
 		GlobalVariables.money += 1
 		player_ice_cream.clear()
