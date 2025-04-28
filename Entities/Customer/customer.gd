@@ -39,7 +39,7 @@ func _ready():
 		var flavor = (randi() % available_flavors)
 		ice_cream.add_scoop(flavor)
 	if (available_toppings > 0):
-		var num_of_toppings = (randi() % 2)
+		var num_of_toppings = (randi() % 3)
 		for i in range(num_of_toppings):
 			var type = (randi() % available_toppings)
 			ice_cream.add_topping(type)
