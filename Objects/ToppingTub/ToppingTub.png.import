@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c486lj5fdc2th"
-path="res://.godot/imported/Scoop1.png-cc69bf9590b030420924f78fdad7158c.ctex"
+uid="uid://d0g4bpwlucv1b"
+path="res://.godot/imported/ToppingTub.png-71e4d5ab2cc9f8285f28ee0c53efd3b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/IceCream/Scoop1.png"
-dest_files=["res://.godot/imported/Scoop1.png-cc69bf9590b030420924f78fdad7158c.ctex"]
+source_file="res://Objects/ToppingTub/ToppingTub.png"
+dest_files=["res://.godot/imported/ToppingTub.png-71e4d5ab2cc9f8285f28ee0c53efd3b1.ctex"]
 
 [params]
 

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbkgpqvif5ejs"]
+
+[ext_resource type="Script" path="res://Objects/ToppingTub/topping_tub.gd" id="1_0i0cl"]
+[ext_resource type="Texture2D" uid="uid://d0g4bpwlucv1b" path="res://Objects/ToppingTub/ToppingTub.png" id="1_6q2sw"]
+[ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/Interactable/interactable.tscn" id="2_6hrly"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8pum"]
+size = Vector2(32, 32)
+
+[node name="ToppingTub" type="Node2D"]
+script = ExtResource("1_0i0cl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6q2sw")
+hframes = 2
+
+[node name="Interactable" parent="." instance=ExtResource("2_6hrly")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("RectangleShape2D_q8pum")
