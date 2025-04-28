@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=4 uid="uid://dvd16v4poj8hh"]
+[gd_scene load_steps=18 format=4 uid="uid://dvd16v4poj8hh"]
 
+[ext_resource type="Script" path="res://Levels/Shop/shop.gd" id="1_6nijv"]
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Entities/Player/player.tscn" id="1_e5fds"]
 [ext_resource type="TileSet" uid="uid://dsegm4aebwgo5" path="res://Levels/Shop/shop.tres" id="3_ses2q"]
 [ext_resource type="PackedScene" uid="uid://cabv6yl4ij8tu" path="res://Objects/IceCream/ice_cream.tscn" id="3_sutp4"]
@@ -26,6 +27,7 @@ font_size = 64
 shadow_color = Color(0, 0, 0, 0.145098)
 
 [node name="Shop" type="Node2D"]
+script = ExtResource("1_6nijv")
 
 [node name="Player" parent="." instance=ExtResource("1_e5fds")]
 z_index = 1
@@ -59,14 +61,14 @@ z_index = 2
 position = Vector2(176, 144)
 
 [node name="VanillaTub" parent="." instance=ExtResource("4_4ak0b")]
-position = Vector2(208, 80)
+position = Vector2(272, 80)
 
 [node name="ChocolateTub" parent="." instance=ExtResource("4_4ak0b")]
 position = Vector2(240, 80)
 flavor = 1
 
 [node name="StrawberryTub" parent="." instance=ExtResource("4_4ak0b")]
-position = Vector2(272, 80)
+position = Vector2(208, 80)
 flavor = 2
 
 [node name="MintTub" parent="." instance=ExtResource("4_4ak0b")]
@@ -79,11 +81,11 @@ flavor = 4
 
 [node name="SprinklesTub" parent="." instance=ExtResource("6_8nawl")]
 z_index = 1
-position = Vector2(112, 144)
+position = Vector2(144, 144)
 
 [node name="CherriesTub" parent="." instance=ExtResource("6_8nawl")]
 z_index = 1
-position = Vector2(144, 144)
+position = Vector2(112, 144)
 type = 1
 
 [node name="Trash" parent="." instance=ExtResource("7_86lcm")]
@@ -114,8 +116,8 @@ label_settings = SubResource("LabelSettings_slvxm")
 script = ExtResource("9_eikm8")
 
 [node name="Transitioner" parent="CanvasLayer" instance=ExtResource("8_mowwh")]
-offset_left = -16.0
-offset_right = -16.0
+offset_left = -8.0
+offset_right = -8.0
 scene_to_load = ExtResource("9_jb55j")
 
 [node name="TransitionButton" type="CheckButton" parent="CanvasLayer" node_paths=PackedStringArray("transitioner")]

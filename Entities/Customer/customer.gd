@@ -9,17 +9,45 @@ var patience_time = 10
 
 func _ready():
 	interactable.interact = _on_interact
+	var available_flavors
+	var available_toppings
 
+	# Set variables depending on day
+	match GlobalVariables.day:
+		1:
+			patience_time = 10
+			available_flavors = 3
+			available_toppings = 0
+		2:
+			patience_time = 10
+			available_flavors = 4
+			available_toppings = 0
+		3:
+			patience_time = 10
+			available_flavors = 4
+			available_toppings = 1
+		4:
+			patience_time = 10
+			available_flavors = 5
+			available_toppings = 1
+		5:
+			patience_time = 10
+			available_flavors = 5
+			available_toppings = 2
+
+	print("Day: ", GlobalVariables.day)
+	print("Flavors: ", available_flavors)
 	# Create random order
 	ice_cream.add_cone()
 	var num_of_scoops = (randi() % 3) + 1
 	for i in range(num_of_scoops):
-		var flavor = (randi() % 3)
+		var flavor = (randi() % available_flavors)
 		ice_cream.add_scoop(flavor)
-	var num_of_toppings = (randi() % 3)
-	for i in range(num_of_toppings):
-		var type = (randi() % 2)
-		ice_cream.add_topping(type)
+	if (available_toppings > 0):
+		var num_of_toppings = (randi() % 2)
+		for i in range(num_of_toppings):
+			var type = (randi() % available_toppings)
+			ice_cream.add_topping(type)
 	patience_timer.start(patience_time)
 	
 func _process(delta: float) -> void:
