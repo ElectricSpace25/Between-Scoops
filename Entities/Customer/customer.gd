@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var ice_cream = $IceCream
 @onready var interactable: Area2D = $Interactable
 @onready var player_ice_cream = $"../../../Player/IceCream"
@@ -11,10 +12,13 @@ var patience_time = 15
 
 func _ready():
 	interactable.interact = _on_interact
-	var available_flavors
-	var available_toppings
+	
+	# Set sprite
+	sprite_2d.frame = randi() % 16
 
 	# Set variables depending on day
+	var available_flavors
+	var available_toppings
 	match GlobalVariables.day:
 		1:
 			available_flavors = 3
