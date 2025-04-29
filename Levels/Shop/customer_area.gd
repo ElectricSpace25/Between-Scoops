@@ -8,12 +8,16 @@ var customer_spawn_time = 4
 
 func _ready():
 	set_difficulty()
-	level_timer.start(60)
+	if GlobalVariables.day != 1:
+		start_level_timer()
 	for i in range(3):
 		var new_slot = customer_slot_scene.instantiate()
 		add_child(new_slot)
 		new_slot.position.x += 32*i
 		
+func start_level_timer():
+	level_timer.start(60)
+	
 func set_difficulty():
 	match GlobalVariables.day:
 		1:

@@ -40,4 +40,4 @@ func hide_dialogue():
 
 # Close Dialogue Box if press x on UI
 func _on_close_button_pressed() -> void:
-	hide_dialogue()
+	panel.visible = false
