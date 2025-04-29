@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://df7ttqtk6frc8"]
 
-[ext_resource type="TileSet" uid="uid://ch2fw67d0jeqj" path="res://Levels/Apartment/apartment.tres" id="1_5l3tb"]
+[ext_resource type="TileSet" uid="uid://dy8gobw7x6wbp" path="res://Levels/Apartment/apartment.tres" id="1_5l3tb"]
 [ext_resource type="PackedScene" uid="uid://dpftuibgtewvt" path="res://Entities/Roommates/Roommate.tscn" id="1_a1d0b"]
 [ext_resource type="Script" path="res://Resources/Dialogue/dialogue.gd" id="2_dtgsd"]
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Entities/Player/player.tscn" id="3_5lqoc"]

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=19 format=4 uid="uid://dvd16v4poj8hh"]
-=======
-[gd_scene load_steps=20 format=4 uid="uid://dvd16v4poj8hh"]
->>>>>>> de5c644c71cdef6dea0499e9f2374199fa9a38ef
+[gd_scene load_steps=21 format=4 uid="uid://bi2a7r256l3t1"]
 
 [ext_resource type="Script" path="res://Levels/Shop/shop.gd" id="1_6nijv"]
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Entities/Player/player.tscn" id="1_e5fds"]
@@ -19,12 +15,9 @@
 [ext_resource type="Script" path="res://Levels/Shop/money_label.gd" id="9_eikm8"]
 [ext_resource type="Script" path="res://Levels/Shop/TransitionButton.gd" id="9_ismv7"]
 [ext_resource type="PackedScene" uid="uid://df7ttqtk6frc8" path="res://Levels/Apartment/apartment.tscn" id="9_jb55j"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://cgwl71m4srbea" path="res://UI/SplashScreen/spash_screen_ui.tscn" id="10_dlm8n"]
-=======
-[ext_resource type="AudioStream" uid="uid://b88pd71xehy8r" path="res://Audio/beans - yawn.mp3" id="16_2b1mo"]
-[ext_resource type="PackedScene" uid="uid://cnwraulivxpoe" path="res://Components/AudioManager/audio_manager.tscn" id="17_31a5c"]
->>>>>>> de5c644c71cdef6dea0499e9f2374199fa9a38ef
+[ext_resource type="AudioStream" uid="uid://b88pd71xehy8r" path="res://Audio/beans - yawn.mp3" id="17_mnds6"]
+[ext_resource type="PackedScene" uid="uid://cnwraulivxpoe" path="res://Components/AudioManager/audio_manager.tscn" id="18_pywiq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tqm5"]
 font = ExtResource("8_q1f54")
@@ -57,6 +50,7 @@ metadata/_edit_lock_ = true
 
 [node name="BottomTileMapLayer" type="TileMapLayer" parent="TileMap"]
 z_index = -1
+tile_map_data = PackedByteArray("AAABAAAAAQAEAAAAAAABAAEAAQACAAAAAAABAAIAAQACAAAAAAABAAMAAQACAAAAAAABAAQAAQACAAAAAAABAAUAAQACAAAAAAACAAAAAQAEAAAAAAACAAUAAQACAAAAAAADAAAAAQAEAAAAAAADAAMAAQACAAAAAAADAAUAAQACAAAAAAAEAAAAAQAEAAAAAAAEAAMAAQACAAAAAAAEAAUAAQACAAAAAAAFAAAAAQAEAAAAAAAFAAMAAQACAAAAAAAFAAUAAQACAAAAAAAGAAAAAQAEAAAAAAAGAAMAAQACAAAAAAAGAAUAAQACAAAAAAAHAAAAAQAEAAAAAAAHAAMAAQACAAAAAAAHAAUAAQACAAAAAAAIAAAAAQAEAAAAAAAIAAMAAQACAAAAAAAIAAUAAQACAAAAAAAJAAAAAQAEAAAAAAAJAAUAAQACAAAAAAAKAAAAAQAEAAAAAAAKAAMAAQACAAAAAAAKAAQAAQACAAAAAAAKAAUAAQACAAAAAAAAAAAAAQAEAAAAAAAAAAEAAQACAAAAAAAAAAIAAQACAAAAAAAAAAMAAQACAAAAAAAAAAQAAQACAAAAAAAAAAUAAQACAAAAAAAAAAYAAQACAAAAAAABAAYAAQACAAAAAAACAAYAAQACAAAAAAADAAYAAQACAAAAAAAEAAYAAQACAAAAAAAFAAYAAQACAAAAAAAGAAYAAQACAAAAAAAHAAYAAQACAAAAAAAIAAYAAQACAAAAAAAJAAYAAQACAAAAAAAKAAYAAQACAAAAAAALAAYAAQACAAAAAAALAAUAAQACAAAAAAALAAQAAQADAAAAAAALAAMAAQADAAAAAAALAAIAAQADAAAAAAALAAEAAQADAAAAAAALAAAAAQAEAAAAAAACAAMAAAABAAEAAAADAAQAAAACAAIAAAAEAAQAAAACAAIAAAAFAAQAAAACAAIAAAAGAAQAAAAEAAAAAAAHAAQAAAAEAAAAAAAIAAQAAAAEAAAAAAAJAAMAAAADAAEAAAAKAAEAAQACAAAAAAAKAAIAAQACAAAAAAACAAIAAAABAAAAAAADAAIAAAACAAAAAAAEAAIAAAACAAAAAAAFAAIAAAACAAAAAAAGAAIAAAACAAAAAAAHAAIAAAACAAAAAAAIAAIAAAACAAAAAAAJAAIAAAADAAAAAAACAAEAAQACAAAAAAADAAEAAQACAAAAAAAEAAEAAQACAAAAAAAFAAEAAQACAAAAAAAGAAEAAQACAAAAAAAHAAEAAQACAAAAAAAIAAEAAQACAAAAAAAJAAEAAQACAAAAAAAJAAQAAAADAAIAAAACAAQAAAABAAIAAAA=")
 tile_set = ExtResource("3_ses2q")
 metadata/_edit_lock_ = true
 
@@ -150,11 +144,11 @@ wait_time = 3.0
 one_shot = true
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("16_2b1mo")
+stream = ExtResource("17_mnds6")
 volume_db = -15.0
 autoplay = true
 
-[node name="AudioManager" parent="." instance=ExtResource("17_31a5c")]
+[node name="AudioManager" parent="." instance=ExtResource("18_pywiq")]
 
 [connection signal="toggled" from="CanvasLayer/TransitionButton" to="CanvasLayer/TransitionButton" method="_on_toggled"]
 [connection signal="timeout" from="LevelTimer" to="CustomerArea" method="_on_level_timer_timeout"]
