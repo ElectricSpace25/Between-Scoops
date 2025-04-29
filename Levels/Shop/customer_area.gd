@@ -7,11 +7,30 @@ var customer_max = 2
 var customer_spawn_time = 4
 
 func _ready():
+	set_difficulty()
 	level_timer.start(60)
 	for i in range(3):
 		var new_slot = customer_slot_scene.instantiate()
 		add_child(new_slot)
 		new_slot.position.x += 32*i
+		
+func set_difficulty():
+	match GlobalVariables.day:
+		1:
+			customer_max = 2
+			customer_spawn_time = 5
+		2:
+			customer_max = 2
+			customer_spawn_time = 4
+		3:
+			customer_max = 3
+			customer_spawn_time = 4
+		4:
+			customer_max = 3
+			customer_spawn_time = 3
+		5:
+			customer_max = 3
+			customer_spawn_time = 3
 	
 func _process(delta: float) -> void:
 	if (not level_timer.is_stopped()):

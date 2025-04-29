@@ -1,10 +1,12 @@
-[gd_scene load_steps=16 format=4 uid="uid://dvd16v4poj8hh"]
+[gd_scene load_steps=18 format=4 uid="uid://dvd16v4poj8hh"]
 
+[ext_resource type="Script" path="res://Levels/Shop/shop.gd" id="1_6nijv"]
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Entities/Player/player.tscn" id="1_e5fds"]
 [ext_resource type="TileSet" uid="uid://dsegm4aebwgo5" path="res://Levels/Shop/shop.tres" id="3_ses2q"]
 [ext_resource type="PackedScene" uid="uid://cabv6yl4ij8tu" path="res://Objects/IceCream/ice_cream.tscn" id="3_sutp4"]
 [ext_resource type="PackedScene" uid="uid://cy2oghn4n4vp4" path="res://Objects/IceCreamTub/ice_cream_tub.tscn" id="4_4ak0b"]
 [ext_resource type="PackedScene" uid="uid://owcjygqt8cnl" path="res://Objects/ConeDispenser/cone_dispenser.tscn" id="5_pgjp3"]
+[ext_resource type="PackedScene" uid="uid://dbkgpqvif5ejs" path="res://Objects/ToppingTub/topping_tub.tscn" id="6_8nawl"]
 [ext_resource type="Script" path="res://Levels/Shop/customer_area.gd" id="7_7mbdx"]
 [ext_resource type="PackedScene" uid="uid://d38ej1a1jhuag" path="res://Objects/Trash/trash.tscn" id="7_86lcm"]
 [ext_resource type="Script" path="res://Levels/Shop/timer_label.gd" id="8_fktjj"]
@@ -25,12 +27,14 @@ font_size = 64
 shadow_color = Color(0, 0, 0, 0.145098)
 
 [node name="Shop" type="Node2D"]
+script = ExtResource("1_6nijv")
 
 [node name="Player" parent="." instance=ExtResource("1_e5fds")]
 z_index = 1
 position = Vector2(240, 96)
 
 [node name="IceCream" parent="Player" instance=ExtResource("3_sutp4")]
+z_index = 2
 position = Vector2(-20, -5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -43,7 +47,7 @@ metadata/_edit_lock_ = true
 
 [node name="BottomTileMapLayer" type="TileMapLayer" parent="TileMap"]
 z_index = -1
-tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAACAAAAAAAAAAAAAAACAAUAAAAAAAAAAAADAAAAAAAAAAAAAAADAAMAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAAAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAUAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAAAAAAAAAAAAAAJAAUAAAAAAAAAAAAKAAAAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAABAAYAAAAAAAAAAAACAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAKAAYAAAAAAAAAAAALAAYAAAAAAAAAAAALAAUAAAAAAAAAAAALAAQAAAAAAAAAAAALAAMAAAAAAAAAAAALAAIAAAAAAAAAAAALAAEAAAAAAAAAAAALAAAAAAAAAAAAAAACAAMAAAABAAEAAAACAAQAAAABAAIAAAADAAQAAAACAAIAAAAEAAQAAAACAAIAAAAFAAQAAAACAAIAAAAGAAQAAAAEAAAAAAAHAAQAAAAEAAAAAAAIAAQAAAAEAAAAAAAJAAQAAAADAAIAAAAJAAMAAAADAAEAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAACAAIAAAABAAAAAAADAAIAAAACAAAAAAAEAAIAAAACAAAAAAAFAAIAAAACAAAAAAAGAAIAAAACAAAAAAAHAAIAAAACAAAAAAAIAAIAAAACAAAAAAAJAAIAAAADAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAACAAAAAAAAAAAAAAACAAUAAAAAAAAAAAADAAAAAAAAAAAAAAADAAMAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAAAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAUAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAAAAAAAAAAAAAAJAAUAAAAAAAAAAAAKAAAAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAABAAYAAAAAAAAAAAACAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAKAAYAAAAAAAAAAAALAAYAAAAAAAAAAAALAAUAAAAAAAAAAAALAAQAAAAAAAAAAAALAAMAAAAAAAAAAAALAAIAAAAAAAAAAAALAAEAAAAAAAAAAAALAAAAAAAAAAAAAAACAAMAAAABAAEAAAADAAQAAAACAAIAAAAEAAQAAAACAAIAAAAFAAQAAAACAAIAAAAGAAQAAAAEAAAAAAAHAAQAAAAEAAAAAAAIAAQAAAAEAAAAAAAJAAMAAAADAAEAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAACAAIAAAABAAAAAAADAAIAAAACAAAAAAAEAAIAAAACAAAAAAAFAAIAAAACAAAAAAAGAAIAAAACAAAAAAAHAAIAAAACAAAAAAAIAAIAAAACAAAAAAAJAAIAAAADAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAQAAAADAAIAAAACAAQAAAABAAIAAAA=")
 tile_set = ExtResource("3_ses2q")
 metadata/_edit_lock_ = true
 
@@ -52,26 +56,43 @@ z_index = 1
 tile_map_data = PackedByteArray("AAADAAQAAAACAAIAAAAEAAQAAAACAAIAAAAFAAQAAAACAAIAAAAGAAQAAAAEAAAAAAAHAAQAAAAEAAAAAAAIAAQAAAAEAAAAAAA=")
 tile_set = ExtResource("3_ses2q")
 
+[node name="ConeDispenser" parent="." instance=ExtResource("5_pgjp3")]
+z_index = 2
+position = Vector2(176, 144)
+
 [node name="VanillaTub" parent="." instance=ExtResource("4_4ak0b")]
-position = Vector2(208, 80)
+position = Vector2(272, 80)
 
 [node name="ChocolateTub" parent="." instance=ExtResource("4_4ak0b")]
 position = Vector2(240, 80)
 flavor = 1
 
 [node name="StrawberryTub" parent="." instance=ExtResource("4_4ak0b")]
-position = Vector2(272, 80)
+position = Vector2(208, 80)
 flavor = 2
 
-[node name="ConeDispenser" parent="." instance=ExtResource("5_pgjp3")]
-z_index = 2
-position = Vector2(176, 144)
+[node name="MintTub" parent="." instance=ExtResource("4_4ak0b")]
+position = Vector2(176, 80)
+flavor = 3
+
+[node name="LemonTub" parent="." instance=ExtResource("4_4ak0b")]
+position = Vector2(144, 80)
+flavor = 4
+
+[node name="SprinklesTub" parent="." instance=ExtResource("6_8nawl")]
+z_index = 1
+position = Vector2(144, 144)
+
+[node name="CherriesTub" parent="." instance=ExtResource("6_8nawl")]
+z_index = 1
+position = Vector2(112, 144)
+type = 1
 
 [node name="Trash" parent="." instance=ExtResource("7_86lcm")]
 position = Vector2(304, 112)
 
 [node name="CustomerArea" type="Node2D" parent="."]
-z_index = 2
+z_index = 3
 position = Vector2(208, 180)
 script = ExtResource("7_7mbdx")
 
@@ -95,6 +116,8 @@ label_settings = SubResource("LabelSettings_slvxm")
 script = ExtResource("9_eikm8")
 
 [node name="Transitioner" parent="CanvasLayer" instance=ExtResource("8_mowwh")]
+offset_left = -8.0
+offset_right = -8.0
 scene_to_load = ExtResource("9_jb55j")
 
 [node name="TransitionButton" type="CheckButton" parent="CanvasLayer" node_paths=PackedStringArray("transitioner")]
