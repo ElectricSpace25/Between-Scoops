@@ -6,6 +6,7 @@ extends Node2D
 @onready var patience_timer: Timer = $PatienceTimer
 @onready var patience_bar: ProgressBar = $ProgressBar
 @onready var audio_manager = $"../../../AudioManager"
+@onready var summary_screen_ui: Control = $"../../../CanvasLayer/SummaryScreenUI"
 var patience_time = 15
 
 func _ready():
@@ -62,7 +63,9 @@ func _on_interact():
 	
 	if player_ice_cream.hasCone && player_ice_cream.scoops == ice_cream.scoops && player_toppings == customer_toppings:
 		#print("Correct order!")
+		summary_screen_ui.customers_served += 1
 		GlobalVariables.money += 1
+		summary_screen_ui.profit += 1
 		player_ice_cream.clear()
 		audio_manager.play_coins()
 		queue_free()
@@ -71,5 +74,6 @@ func _on_interact():
 
 func _on_patience_timer_timeout() -> void:
 	print("Customer got too impatient!")
+	summary_screen_ui.customers_lost += 1
 	audio_manager.play_leave()
 	queue_free()

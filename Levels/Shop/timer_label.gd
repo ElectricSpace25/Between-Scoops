@@ -1,6 +1,9 @@
 extends Label
 
-@onready var level_timer : Timer = $"../../LevelTimer"
+@onready var level_timer : Timer = $"../../../../../LevelTimer"
 
 func _process(delta):
-	text = "Time: %d" % [ceil(level_timer.time_left)]
+	if level_timer.is_stopped():
+		text = "Time: "
+	else:
+		text = "Time: %d" % [ceil(level_timer.time_left)]

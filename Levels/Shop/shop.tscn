@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bi2a7r256l3t1"]
+[gd_scene load_steps=24 format=4 uid="uid://dvd16v4poj8hh"]
 
 [ext_resource type="Script" path="res://Levels/Shop/shop.gd" id="1_6nijv"]
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Entities/Player/player.tscn" id="1_e5fds"]
@@ -15,18 +15,28 @@
 [ext_resource type="Script" path="res://Levels/Shop/money_label.gd" id="9_eikm8"]
 [ext_resource type="Script" path="res://Levels/Shop/TransitionButton.gd" id="9_ismv7"]
 [ext_resource type="PackedScene" uid="uid://df7ttqtk6frc8" path="res://Levels/Apartment/apartment.tscn" id="9_jb55j"]
-[ext_resource type="PackedScene" uid="uid://cgwl71m4srbea" path="res://UI/SplashScreen/spash_screen_ui.tscn" id="10_dlm8n"]
+[ext_resource type="PackedScene" uid="uid://cgwl71m4srbea" path="res://UI/SplashScreen/splash_screen_ui.tscn" id="10_dlm8n"]
+[ext_resource type="PackedScene" uid="uid://6chsw8u06dp0" path="res://UI/SummaryScreen/summary_screen_ui.tscn" id="11_4cypd"]
+[ext_resource type="Script" path="res://Levels/Shop/day_label.gd" id="12_gb566"]
 [ext_resource type="AudioStream" uid="uid://b88pd71xehy8r" path="res://Audio/beans - yawn.mp3" id="17_mnds6"]
 [ext_resource type="PackedScene" uid="uid://cnwraulivxpoe" path="res://Components/AudioManager/audio_manager.tscn" id="18_pywiq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tqm5"]
 font = ExtResource("8_q1f54")
 font_size = 64
+shadow_size = 5
 shadow_color = Color(0, 0, 0, 0.145098)
 
 [sub_resource type="LabelSettings" id="LabelSettings_slvxm"]
 font = ExtResource("8_q1f54")
 font_size = 64
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.145098)
+
+[sub_resource type="LabelSettings" id="LabelSettings_doipd"]
+font = ExtResource("8_q1f54")
+font_size = 64
+shadow_size = 5
 shadow_color = Color(0, 0, 0, 0.145098)
 
 [node name="Shop" type="Node2D"]
@@ -42,7 +52,7 @@ position = Vector2(-20, -5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 1
-position = Vector2(192, 108)
+position = Vector2(192, 100)
 zoom = Vector2(3, 3)
 
 [node name="TileMap" type="Node2D" parent="."]
@@ -50,7 +60,7 @@ metadata/_edit_lock_ = true
 
 [node name="BottomTileMapLayer" type="TileMapLayer" parent="TileMap"]
 z_index = -1
-tile_map_data = PackedByteArray("AAABAAAAAQAEAAAAAAABAAEAAQACAAAAAAABAAIAAQACAAAAAAABAAMAAQACAAAAAAABAAQAAQACAAAAAAABAAUAAQACAAAAAAACAAAAAQAEAAAAAAACAAUAAQACAAAAAAADAAAAAQAEAAAAAAADAAMAAQACAAAAAAADAAUAAQACAAAAAAAEAAAAAQAEAAAAAAAEAAMAAQACAAAAAAAEAAUAAQACAAAAAAAFAAAAAQAEAAAAAAAFAAMAAQACAAAAAAAFAAUAAQACAAAAAAAGAAAAAQAEAAAAAAAGAAMAAQACAAAAAAAGAAUAAQACAAAAAAAHAAAAAQAEAAAAAAAHAAMAAQACAAAAAAAHAAUAAQACAAAAAAAIAAAAAQAEAAAAAAAIAAMAAQACAAAAAAAIAAUAAQACAAAAAAAJAAAAAQAEAAAAAAAJAAUAAQACAAAAAAAKAAAAAQAEAAAAAAAKAAMAAQACAAAAAAAKAAQAAQACAAAAAAAKAAUAAQACAAAAAAAAAAAAAQAEAAAAAAAAAAEAAQACAAAAAAAAAAIAAQACAAAAAAAAAAMAAQACAAAAAAAAAAQAAQACAAAAAAAAAAUAAQACAAAAAAAAAAYAAQACAAAAAAABAAYAAQACAAAAAAACAAYAAQACAAAAAAADAAYAAQACAAAAAAAEAAYAAQACAAAAAAAFAAYAAQACAAAAAAAGAAYAAQACAAAAAAAHAAYAAQACAAAAAAAIAAYAAQACAAAAAAAJAAYAAQACAAAAAAAKAAYAAQACAAAAAAALAAYAAQACAAAAAAALAAUAAQACAAAAAAALAAQAAQADAAAAAAALAAMAAQADAAAAAAALAAIAAQADAAAAAAALAAEAAQADAAAAAAALAAAAAQAEAAAAAAACAAMAAAABAAEAAAADAAQAAAACAAIAAAAEAAQAAAACAAIAAAAFAAQAAAACAAIAAAAGAAQAAAAEAAAAAAAHAAQAAAAEAAAAAAAIAAQAAAAEAAAAAAAJAAMAAAADAAEAAAAKAAEAAQACAAAAAAAKAAIAAQACAAAAAAACAAIAAAABAAAAAAADAAIAAAACAAAAAAAEAAIAAAACAAAAAAAFAAIAAAACAAAAAAAGAAIAAAACAAAAAAAHAAIAAAACAAAAAAAIAAIAAAACAAAAAAAJAAIAAAADAAAAAAACAAEAAQACAAAAAAADAAEAAQACAAAAAAAEAAEAAQACAAAAAAAFAAEAAQACAAAAAAAGAAEAAQACAAAAAAAHAAEAAQACAAAAAAAIAAEAAQACAAAAAAAJAAEAAQACAAAAAAAJAAQAAAADAAIAAAACAAQAAAABAAIAAAA=")
+tile_map_data = PackedByteArray("AAABAAAAAQAEAAAAAAABAAEAAQACAAAAAAABAAIAAQACAAAAAAABAAMAAQACAAAAAAABAAQAAQACAAAAAAABAAUAAQACAAAAAAACAAAAAQAEAAAAAAACAAUAAQACAAAAAAADAAAAAQAEAAAAAAADAAMAAQACAAAAAAADAAUAAQACAAAAAAAEAAAAAQAEAAAAAAAEAAMAAQACAAAAAAAEAAUAAQACAAAAAAAFAAAAAQAEAAAAAAAFAAMAAQACAAAAAAAFAAUAAQACAAAAAAAGAAAAAQAEAAAAAAAGAAMAAQACAAAAAAAGAAUAAQACAAAAAAAHAAAAAQAEAAAAAAAHAAMAAQACAAAAAAAHAAUAAQACAAAAAAAIAAAAAQAEAAAAAAAIAAMAAQACAAAAAAAIAAUAAQACAAAAAAAJAAAAAQAEAAAAAAAJAAUAAQACAAAAAAAKAAAAAQAEAAAAAAAKAAMAAQACAAAAAAAKAAQAAQACAAAAAAAKAAUAAQACAAAAAAAAAAAAAQAEAAAAAAAAAAEAAQACAAAAAAAAAAIAAQACAAAAAAAAAAMAAQACAAAAAAAAAAQAAQACAAAAAAAAAAUAAQACAAAAAAAAAAYAAQACAAAAAAABAAYAAQACAAAAAAACAAYAAQACAAAAAAADAAYAAQACAAAAAAAEAAYAAQACAAAAAAAFAAYAAQACAAAAAAAGAAYAAQACAAAAAAAHAAYAAQACAAAAAAAIAAYAAQACAAAAAAAJAAYAAQACAAAAAAAKAAYAAQACAAAAAAALAAYAAQACAAAAAAALAAUAAQACAAAAAAALAAQAAQADAAAAAAALAAMAAQADAAAAAAALAAIAAQADAAAAAAALAAEAAQADAAAAAAALAAAAAQAEAAAAAAACAAMAAAABAAEAAAADAAQAAAACAAIAAAAEAAQAAAACAAIAAAAFAAQAAAACAAIAAAAGAAQAAAAEAAAAAAAHAAQAAAAEAAAAAAAIAAQAAAAEAAAAAAAJAAMAAAADAAEAAAAKAAEAAQACAAAAAAAKAAIAAQACAAAAAAACAAIAAAABAAAAAAADAAIAAAACAAAAAAAEAAIAAAACAAAAAAAFAAIAAAACAAAAAAAGAAIAAAACAAAAAAAHAAIAAAACAAAAAAAIAAIAAAACAAAAAAAJAAIAAAADAAAAAAACAAEAAQACAAAAAAADAAEAAQACAAAAAAAEAAEAAQACAAAAAAAFAAEAAQACAAAAAAAGAAEAAQACAAAAAAAHAAEAAQACAAAAAAAIAAEAAQACAAAAAAAJAAEAAQACAAAAAAAJAAQAAAADAAIAAAACAAQAAAABAAIAAAALAP//AQAIAAEAAAAKAP//AQAIAAEAAAAJAP//AQAIAAEAAAAIAP//AQAIAAEAAAAHAP//AQAIAAEAAAAGAP//AQAIAAEAAAAFAP//AQAIAAEAAAAEAP//AQAIAAEAAAADAP//AQAIAAEAAAACAP//AQAIAAEAAAABAP//AQAIAAEAAAAAAP//AQAIAAEAAAA=")
 tile_set = ExtResource("3_ses2q")
 metadata/_edit_lock_ = true
 
@@ -101,24 +111,44 @@ script = ExtResource("7_7mbdx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="SpashScreenUI" parent="CanvasLayer" instance=ExtResource("10_dlm8n")]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 106.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
 
-[node name="TimerLabel" type="Label" parent="CanvasLayer"]
-offset_left = 16.0
-offset_right = 108.0
-offset_bottom = 51.0
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 0
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
 text = "Time: "
 label_settings = SubResource("LabelSettings_0tqm5")
 script = ExtResource("8_fktjj")
 
-[node name="MoneyLabel" type="Label" parent="CanvasLayer"]
-offset_left = 16.0
-offset_top = 40.0
-offset_right = 132.0
-offset_bottom = 91.0
+[node name="MoneyLabel" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
 text = "Money: "
 label_settings = SubResource("LabelSettings_slvxm")
 script = ExtResource("9_eikm8")
+
+[node name="DayLabel" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Day"
+label_settings = SubResource("LabelSettings_doipd")
+script = ExtResource("12_gb566")
+
+[node name="SplashScreenUI" parent="CanvasLayer" instance=ExtResource("10_dlm8n")]
+
+[node name="SummaryScreenUI" parent="CanvasLayer" instance=ExtResource("11_4cypd")]
 
 [node name="Transitioner" parent="CanvasLayer" instance=ExtResource("8_mowwh")]
 visible = false
@@ -127,10 +157,10 @@ offset_right = -8.0
 scene_to_load = ExtResource("9_jb55j")
 
 [node name="TransitionButton" type="CheckButton" parent="CanvasLayer" node_paths=PackedStringArray("transitioner")]
-offset_left = 8.0
-offset_top = 96.0
-offset_right = 52.0
-offset_bottom = 120.0
+offset_left = 16.0
+offset_top = 128.0
+offset_right = 60.0
+offset_bottom = 152.0
 focus_mode = 0
 script = ExtResource("9_ismv7")
 transitioner = NodePath("../Transitioner")

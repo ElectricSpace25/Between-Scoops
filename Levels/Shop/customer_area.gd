@@ -3,9 +3,12 @@ extends Node2D
 @onready var level_timer: Timer = $"../LevelTimer"
 @onready var spawn_timer: Timer = $"../SpawnTimer"
 @onready var audio_manager = $"../AudioManager"
+@onready var summary_screen: Control = $"../CanvasLayer/SummaryScreenUI"
+
 var customer_slot_scene = load("res://Components/CustomerSlot/customer_slot.tscn")
 var customer_max = 2
 var customer_spawn_time = 4
+var level_time = 60
 
 func _ready():
 	set_difficulty()
@@ -17,7 +20,7 @@ func _ready():
 		new_slot.position.x += 32*i
 		
 func start_level_timer():
-	level_timer.start(60)
+	level_timer.start(level_time)
 	
 func set_difficulty():
 	match GlobalVariables.day:
@@ -58,6 +61,7 @@ func _on_level_timer_timeout():
 	audio_manager.play_closing()
 	for slot in get_children():
 		slot.clear_customer()
+	summary_screen.show_summary()
 
 func _on_spawn_timer_timeout() -> void:
 	#print("Spawning customer on timer")
