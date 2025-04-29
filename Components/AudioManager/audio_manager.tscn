@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnwraulivxpoe"]
+[gd_scene load_steps=6 format=3 uid="uid://cnwraulivxpoe"]
 
 [ext_resource type="Script" path="res://Components/AudioManager/audio_manager.gd" id="1_dmjnt"]
 [ext_resource type="AudioStream" uid="uid://d4mt84lvjjg0t" path="res://Audio/Coins.mp3" id="2_1u8tq"]
 [ext_resource type="AudioStream" uid="uid://bycvwoth1k37y" path="res://Audio/Leave.mp3" id="3_xjfyh"]
 [ext_resource type="AudioStream" uid="uid://da8532cp11rgq" path="res://Audio/Closing.mp3" id="4_i2dit"]
+[ext_resource type="AudioStream" uid="uid://dh0kowopyvskr" path="res://Audio/Trash.mp3" id="5_g703j"]
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource("1_dmjnt")
@@ -16,3 +17,6 @@ stream = ExtResource("3_xjfyh")
 
 [node name="Closing" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_i2dit")
+
+[node name="Trash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_g703j")
