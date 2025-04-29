@@ -13,6 +13,7 @@ var level_time = 60
 func _ready():
 	set_difficulty()
 	if GlobalVariables.day != 1:
+		await(audio_manager.ready)
 		start_level_timer()
 	for i in range(3):
 		var new_slot = customer_slot_scene.instantiate()
@@ -21,6 +22,7 @@ func _ready():
 		
 func start_level_timer():
 	level_timer.start(level_time)
+	audio_manager.play_background()
 	
 func set_difficulty():
 	match GlobalVariables.day:
