@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var level_timer: Timer = $"../LevelTimer"
 @onready var spawn_timer: Timer = $"../SpawnTimer"
+@onready var audio_manager = $"../AudioManager"
 var customer_slot_scene = load("res://Components/CustomerSlot/customer_slot.tscn")
 var customer_max = 2
 var customer_spawn_time = 4
@@ -50,6 +51,7 @@ func _on_level_timer_timeout():
 	# Level timeout
 	print("LEVEL TIMED OUT")
 	spawn_timer.stop()
+	audio_manager.play_closing()
 	for slot in get_children():
 		slot.clear_customer()
 
