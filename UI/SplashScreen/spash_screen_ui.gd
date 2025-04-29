@@ -11,7 +11,7 @@ extends Control
 @onready var v_box_container: VBoxContainer = $Panel/MarginContainer/VBoxContainer
 @onready var customer_area: Node2D = $"../../CustomerArea"
 
-const ARROWS = preload("res://UI/SplashScreen/Arrows.png")
+const E = preload("res://UI/SplashScreen/E.png")
 const M_3X_6 = preload("res://UI/m3x6.ttf")
 
 # Make Splash Screen Visible on load
@@ -30,7 +30,7 @@ func _on_next_button_pressed() -> void:
 	directions.text = "Press E to interact"
 	
 	# Set a new image
-	texture_rect.texture = ARROWS
+	texture_rect.texture = E
 	
 	# Delete second image, label, and button
 	texture_rect_2.queue_free()
