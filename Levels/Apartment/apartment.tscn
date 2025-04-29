@@ -26,19 +26,19 @@ tile_map_data = PackedByteArray("AAADAAAAAAACAAsAAAADAAEAAAACAAwAAAANAAIAAAACAAs
 tile_set = ExtResource("1_5l3tb")
 
 [node name="Roommate" parent="." instance=ExtResource("1_a1d0b")]
-position = Vector2(28, 58)
+position = Vector2(126, 94)
 roommate_id = "roommate_1"
-roommate_name = "Bob"
+roommate_name = "Yara"
 dialogue_resource = SubResource("Resource_at6vb")
 
 [node name="Roommate2" parent="." instance=ExtResource("1_a1d0b")]
 position = Vector2(294, 112)
 roommate_id = "roommate_2"
-roommate_name = "Anna"
+roommate_name = "Claudia"
 dialogue_resource = SubResource("Resource_l1mep")
 
 [node name="Player" parent="." instance=ExtResource("3_5lqoc")]
-position = Vector2(135, 123)
+position = Vector2(153, 126)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 z_index = 1

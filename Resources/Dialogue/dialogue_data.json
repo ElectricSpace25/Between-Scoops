@@ -6,25 +6,25 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "WAHH WAHHH",
+						"text": "What's up?",
 						"options": {
-							"What's wrong?": "story_1",
-							"I don't want to deal with this...": "exit",
+							"Not much. How was your day?": "story_1",
+							"Actually, I'm tired - I'm going to go rest.": "exit",
 						}
 					},
 					{
 						"state": "story_1",
-						"text": "blah blah blah blah",
+						"text": "I lost my wallet and my cat ran away.",
 						"options": {
-							"Tell me more": "in_progress",
-							"Say Goodbye": "exit"
+							"Oh no!": "in_progress",
+							"Good luck with that. I'll be back.": "exit"
 						}
 					},
 					{
 						"state": "in_progress",
-						"text": "more blah blah",
+						"text": "Yeah, I'm going to go cry now.",
 						"options": {
-							"Say Goodbye": "end_branch"
+							"Bye!": "end_branch"
 						}
 					},
 					{
@@ -44,7 +44,7 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "You should go talk to roommate 2",
+						"text": "I'm crying.",
 						"options": {
 							"Okay.": "exit"
 						}
@@ -61,7 +61,7 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "You should talk to roommate 1",
+						"text": "You should talk to the other roommate.",
 						"options": {
 							"Okay.": "exit"
 						}
