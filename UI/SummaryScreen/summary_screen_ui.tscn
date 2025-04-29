@@ -1,14 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://6chsw8u06dp0"]
+[gd_scene load_steps=6 format=3 uid="uid://6chsw8u06dp0"]
 
 [ext_resource type="Script" path="res://UI/SummaryScreen/summary_screen_ui.gd" id="1_fiew1"]
 [ext_resource type="FontFile" uid="uid://bvnxga24owger" path="res://UI/m3x6.ttf" id="2_yf8qa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4o2i"]
-bg_color = Color(0.152941, 0.0352941, 0.00392157, 0.933333)
+bg_color = Color(0.0784314, 0.286275, 0.388235, 0.945098)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xiukv"]
+bg_color = Color(0.25098, 0.384314, 0.4, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8d1wv"]
+bg_color = Color(0.34902, 0.513726, 0.533333, 1)
 
 [node name="SummaryScreenUI" type="Control"]
 layout_mode = 3
@@ -67,9 +73,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 40)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("2_yf8qa")
 theme_override_font_sizes/font_size = 48
+theme_override_styles/hover = SubResource("StyleBoxFlat_xiukv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8d1wv")
 text = "Go Home"
 
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Button" to="." method="_on_home_button_pressed"]
