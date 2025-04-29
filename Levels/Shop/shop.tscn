@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://dvd16v4poj8hh"]
+[gd_scene load_steps=23 format=4 uid="uid://dvd16v4poj8hh"]
 
 [ext_resource type="Script" path="res://Levels/Shop/shop.gd" id="1_6nijv"]
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Entities/Player/player.tscn" id="1_e5fds"]
@@ -18,7 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://cgwl71m4srbea" path="res://UI/SplashScreen/splash_screen_ui.tscn" id="10_dlm8n"]
 [ext_resource type="PackedScene" uid="uid://6chsw8u06dp0" path="res://UI/SummaryScreen/summary_screen_ui.tscn" id="11_4cypd"]
 [ext_resource type="Script" path="res://Levels/Shop/day_label.gd" id="12_gb566"]
-[ext_resource type="AudioStream" uid="uid://b88pd71xehy8r" path="res://Audio/beans - yawn.mp3" id="17_mnds6"]
 [ext_resource type="PackedScene" uid="uid://cnwraulivxpoe" path="res://Components/AudioManager/audio_manager.tscn" id="18_pywiq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tqm5"]
@@ -172,11 +171,6 @@ one_shot = true
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("17_mnds6")
-volume_db = -15.0
-autoplay = true
 
 [node name="AudioManager" parent="." instance=ExtResource("18_pywiq")]
 

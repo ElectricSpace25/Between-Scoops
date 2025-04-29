@@ -25,3 +25,9 @@ func _ready() -> void:
 		4:
 			# 5 flavors, 1 topping
 			cherries_tub.queue_free()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("cheat_next_day"):
+		if GlobalVariables.day < 5:
+			GlobalVariables.day += 1
+		get_tree().reload_current_scene()
