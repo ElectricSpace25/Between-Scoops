@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnwraulivxpoe"]
+
+[ext_resource type="Script" path="res://Components/AudioManager/audio_manager.gd" id="1_dmjnt"]
+[ext_resource type="AudioStream" uid="uid://d4mt84lvjjg0t" path="res://Components/AudioManager/Coins.mp3" id="2_1u8tq"]
+[ext_resource type="AudioStream" uid="uid://bycvwoth1k37y" path="res://Components/AudioManager/Leave.mp3" id="3_xjfyh"]
+
+[node name="AudioManager" type="Node2D"]
+script = ExtResource("1_dmjnt")
+
+[node name="Coins" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_1u8tq")
+
+[node name="Leave" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xjfyh")

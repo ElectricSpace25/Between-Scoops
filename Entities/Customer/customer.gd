@@ -5,6 +5,7 @@ extends Node2D
 @onready var player_ice_cream = $"../../../Player/IceCream"
 @onready var patience_timer: Timer = $PatienceTimer
 @onready var patience_bar: ProgressBar = $ProgressBar
+@onready var audio_manager = $"../../../AudioManager"
 var patience_time = 15
 
 func _ready():
@@ -30,8 +31,6 @@ func _ready():
 			available_flavors = 5
 			available_toppings = 2
 
-	print("Day: ", GlobalVariables.day)
-	print("Flavors: ", available_flavors)
 	# Create random order
 	ice_cream.add_cone()
 	var num_of_scoops = (randi() % 3) + 1
@@ -65,10 +64,12 @@ func _on_interact():
 		#print("Correct order!")
 		GlobalVariables.money += 1
 		player_ice_cream.clear()
+		audio_manager.play_coins()
 		queue_free()
 	else:
 		print("Wrong order!")
 
 func _on_patience_timer_timeout() -> void:
 	print("Customer got too impatient!")
+	audio_manager.play_leave()
 	queue_free()
