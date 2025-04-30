@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwubuntfo5i5o"
-path="res://.godot/imported/ConeDispenser.png-59584f59d66839c13ed59232a58d7342.ctex"
+uid="uid://bpkhv2f2rwbom"
+path="res://.godot/imported/Scoop copy.png-7d57d5eef0654a6be150902b094cf82d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/ConeDispenser/ConeDispenser.png"
-dest_files=["res://.godot/imported/ConeDispenser.png-59584f59d66839c13ed59232a58d7342.ctex"]
+source_file="res://Objects/IceCream/Scoop copy.png"
+dest_files=["res://.godot/imported/Scoop copy.png-7d57d5eef0654a6be150902b094cf82d.ctex"]
 
 [params]
 
