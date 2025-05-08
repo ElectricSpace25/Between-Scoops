@@ -64,6 +64,14 @@ roommate_id = "alex"
 roommate_name = "Alex"
 dialogue_resource = SubResource("Resource_prbvy")
 
+[node name="Andrew2" parent="." instance=ExtResource("5_c20i7")]
+visible = false
+z_index = 1
+position = Vector2(176, 0)
+roommate_id = "andrew2"
+roommate_name = "Andrew"
+dialogue_resource = SubResource("Resource_3g7up")
+
 [node name="Player" parent="." instance=ExtResource("2_lf4t1")]
 z_index = 1
 position = Vector2(96, 32)
@@ -87,3 +95,4 @@ scene_to_load = "res://Levels/Shop/shop.tscn"
 [connection signal="npc_leaving" from="Andrew" to="." method="_on_andrew_npc_leaving"]
 [connection signal="npc_leaving" from="Celeste" to="." method="_on_celeste_npc_leaving"]
 [connection signal="npc_leaving" from="Alex" to="." method="_on_alex_npc_leaving"]
+[connection signal="npc_leaving" from="Andrew2" to="." method="_on_andrew2_npc_leaving"]

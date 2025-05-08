@@ -6,6 +6,7 @@ extends Node2D
 @onready var andrew: CharacterBody2D = $Andrew
 @onready var celeste: CharacterBody2D = $Celeste
 @onready var alex: CharacterBody2D = $Alex
+@onready var andrew2: CharacterBody2D = $Andrew2
 
 var can_sleep = false
 
@@ -15,6 +16,7 @@ func _ready() -> void:
 		1:
 			celeste.queue_free()
 			alex.queue_free()
+			andrew2.queue_free()
 			player.can_move = false
 			await get_tree().create_timer(1.5).timeout
 			audio_manager.play_knock()
@@ -25,6 +27,7 @@ func _ready() -> void:
 		2:
 			andrew.queue_free()
 			alex.queue_free()
+			andrew2.queue_free()
 			player.can_move = false
 			await get_tree().create_timer(1.5).timeout
 			audio_manager.play_knock()
@@ -35,12 +38,30 @@ func _ready() -> void:
 		3:
 			andrew.queue_free()
 			celeste.queue_free()
+			andrew2.queue_free()
 			player.can_move = false
 			await get_tree().create_timer(1.5).timeout
 			audio_manager.play_knock()
 			await get_tree().create_timer(2.0).timeout
 			door.frame = 1
 			alex.visible = true
+			player.can_move = true
+		4:
+			andrew.queue_free()
+			celeste.queue_free()
+			alex.queue_free()
+			andrew2.queue_free()
+			can_sleep = true
+		5:
+			andrew.queue_free()
+			celeste.queue_free()
+			alex.queue_free()
+			player.can_move = false
+			await get_tree().create_timer(1.5).timeout
+			audio_manager.play_knock()
+			await get_tree().create_timer(2.0).timeout
+			door.frame = 1
+			andrew2.visible = true
 			player.can_move = true
 
 func _on_andrew_npc_leaving() -> void:
@@ -57,3 +78,7 @@ func _on_alex_npc_leaving() -> void:
 	alex.queue_free()
 	door.frame = 0
 	can_sleep = true
+
+func _on_andrew2_npc_leaving() -> void:
+	andrew2.queue_free()
+	#TODO: SWITCH TO PARTY SCENE
