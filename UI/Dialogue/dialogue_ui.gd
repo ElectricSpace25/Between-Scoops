@@ -27,7 +27,7 @@ func show_dialogue(speaker, text, options):
 		var button = Button.new()
 		button.text = option
 		button.add_theme_font_override("font", font)
-		button.add_theme_font_size_override("font_size", 32)
+		button.add_theme_font_size_override("font_size", 48)
 		button.pressed.connect(_on_option_selected.bind(option))
 		dialogue_options.add_child(button)
 

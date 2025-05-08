@@ -13,11 +13,11 @@ border_width_bottom = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_0sbir"]
 font = ExtResource("2_5l2jf")
-font_size = 48
+font_size = 64
 
 [sub_resource type="LabelSettings" id="LabelSettings_ckxek"]
 font = ExtResource("3_2kkmu")
-font_size = 32
+font_size = 48
 
 [node name="DialogueUI" type="Control"]
 layout_mode = 3
@@ -36,7 +36,7 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 10.0
-offset_top = -187.0
+offset_top = -232.0
 offset_right = -12.0
 offset_bottom = -17.0
 grow_horizontal = 2
@@ -48,7 +48,7 @@ layout_mode = 0
 offset_left = 14.0
 offset_top = 11.0
 offset_right = 1118.0
-offset_bottom = 155.0
+offset_bottom = 200.0
 theme_override_constants/separation = 5
 
 [node name="DialogueSpeaker" type="Label" parent="CanvasLayer/Panel/VBoxContainer"]
