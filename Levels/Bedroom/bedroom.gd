@@ -5,7 +5,7 @@ extends Node2D
 @onready var door: Sprite2D = $Door
 @onready var andrew: CharacterBody2D = $Andrew
 
-var can_sleep = true
+var can_sleep = false
 
 func _ready() -> void:
 	audio_manager.play_background()
@@ -17,5 +17,8 @@ func _ready() -> void:
 		door.frame = 1
 		andrew.visible = true
 		player.can_move = true
-		
-# REMEMBER TO INCREMENT DAY AT THE END
+
+func _on_andrew_npc_leaving() -> void:
+	andrew.queue_free()
+	door.frame = 0
+	can_sleep = true

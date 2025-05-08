@@ -23,18 +23,13 @@
 						"state": "story_2",
 						"text": "Yeah, I'm going to go cry now.",
 						"options": {
-							"Bye!": "end_branch"
+							"Bye!": "leave"
 						}
-					},
-					{
-						"state": "end_branch",
-						"text": "Thanks for chatting with me.",
-						"options": {}
-					},
+					}
 				],
 			},
 			{
-				"branch_id": "celeste_2",
+				"branch_id": "andrew_2",
 				"dialogues": [
 					{
 						"state": "start",

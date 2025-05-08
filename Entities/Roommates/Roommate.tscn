@@ -182,3 +182,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DialogueManager" parent="." instance=ExtResource("5_nhlll")]
+
+[connection signal="npc_leaving" from="DialogueManager" to="." method="_on_dialogue_manager_npc_leaving"]

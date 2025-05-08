@@ -4,6 +4,7 @@ extends Node2D
 
 @onready var dialogue_ui: Control = $DialogueUI
 var npc : Node = null
+signal npc_leaving
 
 # Show Dialogue taken from the npc, calling dialogue_ui
 func show_dialogue(npc, text="", options={}):
@@ -38,6 +39,11 @@ func handle_dialogue_choice(option):
 		if npc.current_branch_index < npc.dialogue_resource.get_npc_dialogue(npc.roommate_id).size() - 1:
 			npc.set_dialogue_tree(npc.current_branch_index + 1)
 		hide_dialogue()
+	elif next_state == "leave":
+		# Signals roommate to leave and allows player to sleep
+		npc.set_dialogue_state("start")
+		hide_dialogue()
+		npc_leaving.emit()
 	elif next_state == "exit":
 		# Reset the branch to the start
 		npc.set_dialogue_state("start")
