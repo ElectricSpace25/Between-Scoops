@@ -9,7 +9,7 @@ script = ExtResource("1_cuvqq")
 
 [node name="Background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_igcll")
-volume_db = -15.0
+volume_db = -10.0
 
 [node name="Knock" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_prq62")

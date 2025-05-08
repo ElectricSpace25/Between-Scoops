@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=4 uid="uid://cwgehyqj8jqo2"]
+[gd_scene load_steps=9 format=4 uid="uid://cwgehyqj8jqo2"]
 
 [ext_resource type="TileSet" uid="uid://ucoe8x0r3h75" path="res://Levels/Bedroom/bedroom.tres" id="1_m43ym"]
 [ext_resource type="Script" path="res://Levels/Bedroom/bedroom.gd" id="1_pfa82"]
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Entities/Player/player.tscn" id="2_lf4t1"]
 [ext_resource type="PackedScene" uid="uid://bhcyqkc4ut4es" path="res://Components/AudioManagers/bedroom_audio_manager.tscn" id="3_qcxiv"]
+[ext_resource type="PackedScene" uid="uid://dpftuibgtewvt" path="res://Entities/Roommates/Roommate.tscn" id="5_c20i7"]
+[ext_resource type="Texture2D" uid="uid://qppxuk02h5t5" path="res://Levels/Bedroom/door.png" id="5_l22wo"]
+[ext_resource type="Script" path="res://Resources/Dialogue/dialogue.gd" id="5_s3erp"]
+
+[sub_resource type="Resource" id="Resource_3g7up"]
+script = ExtResource("5_s3erp")
+dialogues = {}
 
 [node name="Bedroom" type="Node2D"]
 script = ExtResource("1_pfa82")
@@ -14,22 +21,30 @@ script = ExtResource("1_pfa82")
 tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAAAAAEAAAABAAAAAAADAAEAAAABAAAAAAADAAAAAAABAAAAAAACAAAAAAABAAAAAAABAAAAAAABAAAAAAABAAEAAAABAAAAAAACAAEAAAABAAAAAAAAAP//AAAFAAAAAAABAP//AAAEAAAAAAACAP//AAAEAAAAAAADAP//AAAEAAAAAAAEAP//AAAEAAAAAAAAAP7/AAAJAAEAAAAEAP7/AAAIAAEAAAABAP7/AAAIAAEAAAACAP7/AAAIAAEAAAADAP7/AAAIAAEAAAD/////AAAFAAMAAAD///7/AAAFAAMAAAD///3/AAAHAAMAAAAAAP3/AAAGAAMAAAABAP3/AAAGAAMAAAACAP3/AAAGAAMAAAADAP3/AAAGAAMAAAAEAP3/AAAGAAMAAAD//wAAAAAFAAMAAAD//wEAAAAFAAMAAAAEAAAAAAABAAAAAAAEAAEAAAABAAAAAAAFAAAAAAABAAAAAAAFAAEAAAABAAAAAAAFAP3/AAAGAAMAAAAGAP3/AAAIAAMAAAAGAP7/AAAFAAMAAAAGAP//AAAFAAMAAAAGAAAAAAAFAAMAAAAFAP//AAAGAAAAAAAFAP7/AAAKAAEAAAD//wIAAAAFAAMAAAAGAAEAAAAFAAMAAAAGAAIAAAAFAAMAAAA=")
 tile_set = ExtResource("1_m43ym")
 
-[node name="MiddleLayer" type="TileMapLayer" parent="Node2D"]
-z_index = 1
-tile_map_data = PackedByteArray("AAAFAP7/AAACAAsAAAAFAP//AAACAAwAAAA=")
-tile_set = ExtResource("1_m43ym")
-
 [node name="TopLayer" type="TileMapLayer" parent="Node2D"]
 z_index = 2
 tile_map_data = PackedByteArray("AAD//wIAAAAJAAMAAAD//wMAAAAJAAEAAAD//wQAAAAFAAAAAAAAAAIAAAAGAAMAAAAAAAMAAAAIAAEAAAAAAAQAAAAEAAAAAAABAAIAAAAGAAMAAAABAAMAAAAIAAEAAAABAAQAAAAEAAAAAAACAAIAAAAGAAMAAAACAAMAAAAIAAEAAAACAAQAAAAEAAAAAAADAAIAAAAGAAMAAAADAAMAAAAIAAEAAAADAAQAAAAEAAAAAAAEAAIAAAAGAAMAAAAEAAMAAAAIAAEAAAAEAAQAAAAEAAAAAAAFAAIAAAAGAAMAAAAFAAMAAAAIAAEAAAAFAAQAAAAEAAAAAAAGAAIAAAAKAAMAAAAGAAMAAAAKAAEAAAAGAAQAAAAGAAAAAAA=")
 tile_set = ExtResource("1_m43ym")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(96, 32)
+zoom = Vector2(3, 3)
+
+[node name="Roommate1" parent="." instance=ExtResource("5_c20i7")]
+visible = false
+z_index = 1
+position = Vector2(176, 0)
+roommate_id = "roommate_1"
+roommate_name = "Roommate 1"
+dialogue_resource = SubResource("Resource_3g7up")
+
 [node name="Player" parent="." instance=ExtResource("2_lf4t1")]
 z_index = 1
 position = Vector2(96, 32)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(96, 32)
-zoom = Vector2(3, 3)
+[node name="Door" type="Sprite2D" parent="."]
+position = Vector2(176, -32)
+texture = ExtResource("5_l22wo")
+hframes = 2
 
 [node name="BedroomAudioManager" parent="." instance=ExtResource("3_qcxiv")]
