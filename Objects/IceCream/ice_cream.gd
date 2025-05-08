@@ -17,12 +17,12 @@ func add_cone():
 
 func add_scoop(flavor):
 	# 1 = Vanilla, 2 = Chocolate, 3 = Strawberry
-	if (has_cone && scoops.size() < 3):
-		if (scoops.size() == 0):
+	if has_cone && scoops.size() < 3:
+		if scoops.size() == 0:
 			scoop1.frame = flavor+1
-		elif (scoops.size() == 1):
+		elif scoops.size() == 1:
 			scoop2.frame = flavor+1
-		elif (scoops.size() == 2):
+		elif scoops.size() == 2:
 			scoop3.frame = flavor+1
 		scoops.append(flavor)
 	else:
@@ -30,10 +30,10 @@ func add_scoop(flavor):
 		
 func add_topping(type):
 	# 1 = Sprinkles, 2 = Cherry
-	if (has_cone && scoops.size() > 0 && toppings.size() < 2 && not toppings.has(type)):
+	if has_cone && scoops.size() > 0 && toppings.size() < 2 && not toppings.has(type):
 		# Determine if topping 1 or 2
 		var topping
-		if (toppings.size() == 0):
+		if toppings.size() == 0:
 			topping = topping1
 		else:
 			topping = topping2
@@ -43,11 +43,11 @@ func add_topping(type):
 		topping.frame = type + 1
 		
 		# Position topping
-		if (scoops.size() == 1):
+		if scoops.size() == 1:
 			topping.position.y = 0
-		elif (scoops.size() == 2):
+		elif scoops.size() == 2:
 			topping.position.y = -6
-		elif (scoops.size() == 3):
+		elif scoops.size() == 3:
 			topping.position.y = -12
 	else:
 		print("Can't add topping!")

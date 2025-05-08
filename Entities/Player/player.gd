@@ -25,12 +25,12 @@ func _physics_process(_delta):
 		update_animation_parameters(input_direction)
 
 func update_animation_parameters(move_input : Vector2):
-	if (move_input != Vector2.ZERO):
+	if move_input != Vector2.ZERO:
 		animation_tree.set("parameters/Walk/blend_position", move_input)
 		animation_tree.set("parameters/Idle/blend_position", move_input)
 
 func pick_new_state():
-	if(velocity != Vector2.ZERO):
+	if velocity != Vector2.ZERO:
 		state_machine.travel("Walk")
 	else:
 		state_machine.travel("Idle")

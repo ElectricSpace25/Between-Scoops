@@ -43,15 +43,15 @@ func set_difficulty():
 			customer_spawn_time = 3
 	
 func _process(delta: float) -> void:
-	if (not level_timer.is_stopped()):
-		if (get_customer_count() < customer_max && spawn_timer.is_stopped()):
+	if not level_timer.is_stopped():
+		if get_customer_count() < customer_max && spawn_timer.is_stopped():
 			#print("Starting spawn timer")
 			spawn_timer.start(customer_spawn_time)
 	
 func attempt_spawn_customer():
 	#print("Attemping customer spawn")
 	for slot in get_children():
-		if (slot.get_child_count() == 0):
+		if slot.get_child_count() == 0:
 			#print("Customer spawned")
 			slot.spawn_customer()
 			break
@@ -72,7 +72,7 @@ func _on_spawn_timer_timeout() -> void:
 func get_customer_count() -> int:
 	var count = 0
 	for slot in get_children():
-		if(slot.get_child_count() > 0):
+		if slot.get_child_count() > 0:
 			count += 1
 	return count
 	

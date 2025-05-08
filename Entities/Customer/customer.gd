@@ -42,7 +42,7 @@ func _ready():
 	for i in range(num_of_scoops):
 		var flavor = (randi() % available_flavors)
 		ice_cream.add_scoop(flavor)
-	if (available_toppings > 0):
+	if available_toppings > 0:
 		var num_of_toppings = (randi() % 3)
 		for i in range(num_of_toppings):
 			var type = (randi() % available_toppings)
@@ -51,9 +51,9 @@ func _ready():
 	
 func _process(delta: float) -> void:
 	patience_bar.value = patience_timer.time_left
-	if(patience_bar.value < patience_time/3):
+	if patience_bar.value < patience_time/3:
 		patience_bar.get("theme_override_styles/fill").bg_color = Color.DARK_RED
-	elif(patience_bar.value < (patience_time/3) * 2):
+	elif patience_bar.value < (patience_time/3) * 2:
 		patience_bar.get("theme_override_styles/fill").bg_color = Color.GOLDENROD
 	else:
 		patience_bar.get("theme_override_styles/fill").bg_color = Color.DARK_GREEN
@@ -65,7 +65,7 @@ func _on_interact():
 	player_toppings.sort()
 	customer_toppings.sort()
 	
-	if player_ice_cream.hasCone && player_ice_cream.scoops == ice_cream.scoops && player_toppings == customer_toppings:
+	if player_ice_cream.has_cone && player_ice_cream.scoops == ice_cream.scoops && player_toppings == customer_toppings:
 		#print("Correct order!")
 		summary_screen_ui.customers_served += 1
 		GlobalVariables.money += 1

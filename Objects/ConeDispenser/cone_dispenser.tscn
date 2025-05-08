@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Objects/ConeDispenser/cone_dispenser.gd" id="1_lmrn5"]
 [ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/Interactable/interactable.tscn" id="2_qdfvi"]
-[ext_resource type="Texture2D" uid="uid://be7x5f1gqj3ih" path="res://Objects/ConeDispenser/ConeDispenser.png" id="3_r305s"]
+[ext_resource type="Texture2D" uid="uid://dwubuntfo5i5o" path="res://Objects/ConeDispenser/ConeDispenser.png" id="3_r305s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dgxkk"]
 size = Vector2(32, 32)
