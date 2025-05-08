@@ -7,17 +7,17 @@ extends Node2D
 @onready var topping1 = $Topping1
 @onready var topping2 = $Topping2
 
-var hasCone = false
+var has_cone = false
 var scoops = []
 var toppings = []
 
 func add_cone():
-	hasCone = true
+	has_cone = true
 	cone.frame = 1
 
 func add_scoop(flavor):
 	# 1 = Vanilla, 2 = Chocolate, 3 = Strawberry
-	if (hasCone && scoops.size() < 3):
+	if (has_cone && scoops.size() < 3):
 		if (scoops.size() == 0):
 			scoop1.frame = flavor+1
 		elif (scoops.size() == 1):
@@ -30,7 +30,7 @@ func add_scoop(flavor):
 		
 func add_topping(type):
 	# 1 = Sprinkles, 2 = Cherry
-	if (hasCone && scoops.size() > 0 && toppings.size() < 2 && not toppings.has(type)):
+	if (has_cone && scoops.size() > 0 && toppings.size() < 2 && not toppings.has(type)):
 		# Determine if topping 1 or 2
 		var topping
 		if (toppings.size() == 0):
@@ -53,7 +53,7 @@ func add_topping(type):
 		print("Can't add topping!")
 		
 func clear():
-	hasCone = false
+	has_cone = false
 	cone.frame = 0
 	scoops.clear()
 	toppings.clear()

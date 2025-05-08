@@ -8,6 +8,6 @@ func _ready():
 	interactable.interact = _on_interact
 	
 func _on_interact():
-	ice_cream.clear()
-	audio_manager.play_trash()
-	print("Ice Cream cleared!")
+	if ice_cream.has_cone:
+		ice_cream.clear()
+		audio_manager.play_trash()
