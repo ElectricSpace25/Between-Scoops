@@ -42,7 +42,7 @@ func set_difficulty():
 			customer_max = 3
 			customer_spawn_time = 3
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not level_timer.is_stopped():
 		if get_customer_count() < customer_max && spawn_timer.is_stopped():
 			#print("Starting spawn timer")

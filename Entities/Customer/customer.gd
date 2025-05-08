@@ -49,7 +49,7 @@ func _ready():
 			ice_cream.add_topping(type)
 	patience_timer.start(patience_time)
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	patience_bar.value = patience_timer.time_left
 	if patience_bar.value < patience_time/3:
 		patience_bar.get("theme_override_styles/fill").bg_color = Color.DARK_RED
