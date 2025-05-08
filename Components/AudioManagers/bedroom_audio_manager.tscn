@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhcyqkc4ut4es"]
+[gd_scene load_steps=4 format=3 uid="uid://bhcyqkc4ut4es"]
 
 [ext_resource type="Script" path="res://Components/AudioManagers/bedroom_audio_manager.gd" id="1_cuvqq"]
 [ext_resource type="AudioStream" uid="uid://c0oxhso03p1rr" path="res://Audio/Bedroom/Knock.mp3" id="2_prq62"]
+[ext_resource type="AudioStream" uid="uid://djek50rmb5a5g" path="res://Audio/Bedroom/sweet dreams ᐸ3.mp3" id="3_igcll"]
 
 [node name="BedroomAudioManager" type="Node2D"]
 script = ExtResource("1_cuvqq")
+
+[node name="Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_igcll")
+volume_db = -15.0
 
 [node name="Knock" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_prq62")

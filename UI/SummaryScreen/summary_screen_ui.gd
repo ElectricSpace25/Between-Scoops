@@ -42,7 +42,6 @@ func show_summary() -> void:
 	stats.text = "$" + str(profit) + " earned\n" + str(customers_served) + " customer(s) served\n" + str(customers_lost) + " customer(s) lost"
 	
 func _on_home_button_pressed() -> void:
-	GlobalVariables.day += 1
 	transitioner.visible = true
 	transitioner.set_next_animation(true)
 	

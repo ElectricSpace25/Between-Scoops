@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=4 uid="uid://cwgehyqj8jqo2"]
+[gd_scene load_steps=5 format=4 uid="uid://cwgehyqj8jqo2"]
 
 [ext_resource type="TileSet" uid="uid://ucoe8x0r3h75" path="res://Levels/Bedroom/bedroom.tres" id="1_m43ym"]
+[ext_resource type="Script" path="res://Levels/Bedroom/bedroom.gd" id="1_pfa82"]
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Entities/Player/player.tscn" id="2_lf4t1"]
+[ext_resource type="PackedScene" uid="uid://bhcyqkc4ut4es" path="res://Components/AudioManagers/bedroom_audio_manager.tscn" id="3_qcxiv"]
 
 [node name="Bedroom" type="Node2D"]
+script = ExtResource("1_pfa82")
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -28,3 +31,5 @@ position = Vector2(96, 32)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(96, 32)
 zoom = Vector2(3, 3)
+
+[node name="BedroomAudioManager" parent="." instance=ExtResource("3_qcxiv")]
