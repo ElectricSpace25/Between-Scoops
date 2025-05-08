@@ -43,20 +43,37 @@
 		],
 	},
 	
-	"roommate_2": {
+	"celeste": {
 		"tree": [
 			{
-				"branch_id": "roommate_2_1",
+				"branch_id": "celeste_1",
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "You should talk to the other roommate.",
+						"text": "Hi I'm Celeste and I'm saying things.",
 						"options": {
-							"Okay.": "exit"
+							"Okay.": "leave"
 						}
 					},
 				],
 			},
 		],
 	},
+	
+	"alex": {
+		"tree": [
+			{
+				"branch_id": "alex_1",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "Hi I'm Alex and I'm saying other things.",
+						"options": {
+							"Okay.": "leave"
+						}
+					},
+				],
+			},
+		],
+	}
 }

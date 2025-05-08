@@ -67,6 +67,5 @@ func set_dialogue_tree(branch_index):
 func set_dialogue_state(state):
 	current_state = state
 
-
 func _on_dialogue_manager_npc_leaving() -> void:
 	npc_leaving.emit()
