@@ -2,6 +2,7 @@
 extends CharacterBody2D
 
 @onready var interactable: Area2D = $Interactable
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 # Add these values in the inspector panel for each roommate!
 @export var roommate_id : String # use for logic checks and quest/dialogue assignments
@@ -20,6 +21,15 @@ func _ready():
 	# Load dialogue data & dialogue manager
 	dialogue_resource.load_from_json("res://Resources/Dialogue/dialogue_data.json")
 	dialogue_manager.npc = self # initialize NPC reference
+	
+	# Change roommate sprite
+	match roommate_id:
+		"roommate_1":
+			sprite_2d.texture = preload("res://Entities/Roommates/Roommate1.png")
+		"roommate_2":
+			sprite_2d.texture = preload("res://Entities/Roommates/Roommate2.png")
+		"roommate_3":
+			sprite_2d.texture = preload("res://Entities/Roommates/Roommate3.png")
 
 # When player interacts with Roommate, start the dialogue
 func _on_interact():
