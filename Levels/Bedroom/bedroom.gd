@@ -5,6 +5,8 @@ extends Node2D
 @onready var door: Sprite2D = $Door
 @onready var andrew: CharacterBody2D = $Andrew
 
+var can_sleep = true
+
 func _ready() -> void:
 	audio_manager.play_background()
 	if GlobalVariables.day == 1:

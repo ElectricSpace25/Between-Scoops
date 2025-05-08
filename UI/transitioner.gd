@@ -6,7 +6,7 @@ class_name Transitioner
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 
 @export var scene_switch_anim : String = "fade_out"
-@export var scene_to_load : PackedScene
+@export_file("*.tscn") var scene_to_load: String
 
 # Make sure TextureRect is not visible when the game starts
 func _ready() -> void:
@@ -25,4 +25,5 @@ func set_next_animation(fading_out : bool):
 # If we just played fade out animation, switch to a new scene (level), set in Scene to Load
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if (scene_to_load != null && anim_name == scene_switch_anim):
-		get_tree().change_scene_to_packed(scene_to_load)
+		get_tree().change_scene_to_file(scene_to_load)
+		

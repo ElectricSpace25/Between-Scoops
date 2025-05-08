@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://cwgehyqj8jqo2"]
+[gd_scene load_steps=11 format=4 uid="uid://cwgehyqj8jqo2"]
 
 [ext_resource type="TileSet" uid="uid://ucoe8x0r3h75" path="res://Levels/Bedroom/bedroom.tres" id="1_m43ym"]
 [ext_resource type="Script" path="res://Levels/Bedroom/bedroom.gd" id="1_pfa82"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dpftuibgtewvt" path="res://Entities/Roommates/Roommate.tscn" id="5_c20i7"]
 [ext_resource type="Texture2D" uid="uid://qppxuk02h5t5" path="res://Levels/Bedroom/door.png" id="5_l22wo"]
 [ext_resource type="Script" path="res://Resources/Dialogue/dialogue.gd" id="5_s3erp"]
+[ext_resource type="PackedScene" uid="uid://bcyh7w4tq7uqc" path="res://Objects/Bed/bed.tscn" id="8_wd85w"]
+[ext_resource type="PackedScene" uid="uid://cymdec3ilt4i0" path="res://UI/transitioner.tscn" id="9_qa6kl"]
 
 [sub_resource type="Resource" id="Resource_3g7up"]
 script = ExtResource("5_s3erp")
@@ -15,13 +17,13 @@ dialogues = {}
 [node name="Bedroom" type="Node2D"]
 script = ExtResource("1_pfa82")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="TileMap" type="Node2D" parent="."]
 
-[node name="BottomLayer" type="TileMapLayer" parent="Node2D"]
+[node name="BottomLayer" type="TileMapLayer" parent="TileMap"]
 tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAAAAAEAAAABAAAAAAADAAEAAAABAAAAAAADAAAAAAABAAAAAAACAAAAAAABAAAAAAABAAAAAAABAAAAAAABAAEAAAABAAAAAAACAAEAAAABAAAAAAAAAP//AAAFAAAAAAABAP//AAAEAAAAAAACAP//AAAEAAAAAAADAP//AAAEAAAAAAAEAP//AAAEAAAAAAAAAP7/AAAJAAEAAAAEAP7/AAAIAAEAAAABAP7/AAAIAAEAAAACAP7/AAAIAAEAAAADAP7/AAAIAAEAAAD/////AAAFAAMAAAD///7/AAAFAAMAAAD///3/AAAHAAMAAAAAAP3/AAAGAAMAAAABAP3/AAAGAAMAAAACAP3/AAAGAAMAAAADAP3/AAAGAAMAAAAEAP3/AAAGAAMAAAD//wAAAAAFAAMAAAD//wEAAAAFAAMAAAAEAAAAAAABAAAAAAAEAAEAAAABAAAAAAAFAAAAAAABAAAAAAAFAAEAAAABAAAAAAAFAP3/AAAGAAMAAAAGAP3/AAAIAAMAAAAGAP7/AAAFAAMAAAAGAP//AAAFAAMAAAAGAAAAAAAFAAMAAAAFAP//AAAGAAAAAAAFAP7/AAAKAAEAAAD//wIAAAAFAAMAAAAGAAEAAAAFAAMAAAAGAAIAAAAFAAMAAAA=")
 tile_set = ExtResource("1_m43ym")
 
-[node name="TopLayer" type="TileMapLayer" parent="Node2D"]
+[node name="TopLayer" type="TileMapLayer" parent="TileMap"]
 z_index = 2
 tile_map_data = PackedByteArray("AAD//wIAAAAJAAMAAAD//wMAAAAJAAEAAAD//wQAAAAFAAAAAAAAAAIAAAAGAAMAAAAAAAMAAAAIAAEAAAAAAAQAAAAEAAAAAAABAAIAAAAGAAMAAAABAAMAAAAIAAEAAAABAAQAAAAEAAAAAAACAAIAAAAGAAMAAAACAAMAAAAIAAEAAAACAAQAAAAEAAAAAAADAAIAAAAGAAMAAAADAAMAAAAIAAEAAAADAAQAAAAEAAAAAAAEAAIAAAAGAAMAAAAEAAMAAAAIAAEAAAAEAAQAAAAEAAAAAAAFAAIAAAAGAAMAAAAFAAMAAAAIAAEAAAAFAAQAAAAEAAAAAAAGAAIAAAAKAAMAAAAGAAMAAAAKAAEAAAAGAAQAAAAGAAAAAAA=")
 tile_set = ExtResource("1_m43ym")
@@ -48,3 +50,11 @@ texture = ExtResource("5_l22wo")
 hframes = 2
 
 [node name="BedroomAudioManager" parent="." instance=ExtResource("3_qcxiv")]
+
+[node name="Bed" parent="." instance=ExtResource("8_wd85w")]
+position = Vector2(32, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transitioner" parent="CanvasLayer" instance=ExtResource("9_qa6kl")]
+scene_to_load = "res://Levels/Shop/shop.tscn"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dvd16v4poj8hh"]
+[gd_scene load_steps=22 format=4 uid="uid://dvd16v4poj8hh"]
 
 [ext_resource type="Script" path="res://Levels/Shop/shop.gd" id="1_6nijv"]
 [ext_resource type="PackedScene" uid="uid://c8ldqs2ik8dbq" path="res://Entities/Player/player.tscn" id="1_e5fds"]
@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://6chsw8u06dp0" path="res://UI/SummaryScreen/summary_screen_ui.tscn" id="11_4cypd"]
 [ext_resource type="Script" path="res://Levels/Shop/day_label.gd" id="12_gb566"]
 [ext_resource type="FontFile" uid="uid://bcducbuv65bdb" path="res://UI/mago3.ttf" id="12_me6fm"]
-[ext_resource type="PackedScene" uid="uid://cwgehyqj8jqo2" path="res://Levels/Bedroom/bedroom.tscn" id="17_qbxed"]
 [ext_resource type="PackedScene" uid="uid://cnwraulivxpoe" path="res://Components/AudioManagers/shop_audio_manager.tscn" id="18_pywiq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tqm5"]
@@ -156,7 +155,7 @@ script = ExtResource("12_gb566")
 visible = false
 offset_left = -8.0
 offset_right = -8.0
-scene_to_load = ExtResource("17_qbxed")
+scene_to_load = "res://Levels/Bedroom/bedroom.tscn"
 
 [node name="TransitionButton" type="CheckButton" parent="CanvasLayer" node_paths=PackedStringArray("transitioner")]
 offset_left = 16.0
