@@ -12,26 +12,26 @@
 [ext_resource type="Script" path="res://Levels/Shop/timer_label.gd" id="8_fktjj"]
 [ext_resource type="PackedScene" uid="uid://cymdec3ilt4i0" path="res://UI/transitioner.tscn" id="8_mowwh"]
 [ext_resource type="Script" path="res://Levels/Shop/money_label.gd" id="9_eikm8"]
+[ext_resource type="FontFile" uid="uid://ddk1u5fa2lrj" path="res://UI/mago1.ttf" id="10_c6dv7"]
 [ext_resource type="PackedScene" uid="uid://cgwl71m4srbea" path="res://UI/SplashScreen/splash_screen_ui.tscn" id="10_dlm8n"]
 [ext_resource type="PackedScene" uid="uid://6chsw8u06dp0" path="res://UI/SummaryScreen/summary_screen_ui.tscn" id="11_4cypd"]
 [ext_resource type="Script" path="res://Levels/Shop/day_label.gd" id="12_gb566"]
-[ext_resource type="FontFile" uid="uid://bcducbuv65bdb" path="res://UI/mago3.ttf" id="12_me6fm"]
 [ext_resource type="PackedScene" uid="uid://cnwraulivxpoe" path="res://Components/AudioManagers/shop_audio_manager.tscn" id="18_pywiq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tqm5"]
-font = ExtResource("12_me6fm")
+font = ExtResource("10_c6dv7")
 font_size = 48
 shadow_size = 5
 shadow_color = Color(0, 0, 0, 0.145098)
 
 [sub_resource type="LabelSettings" id="LabelSettings_slvxm"]
-font = ExtResource("12_me6fm")
+font = ExtResource("10_c6dv7")
 font_size = 48
 shadow_size = 5
 shadow_color = Color(0, 0, 0, 0.145098)
 
 [sub_resource type="LabelSettings" id="LabelSettings_doipd"]
-font = ExtResource("12_me6fm")
+font = ExtResource("10_c6dv7")
 font_size = 48
 shadow_size = 5
 shadow_color = Color(0, 0, 0, 0.145098)
