@@ -57,4 +57,5 @@ position = Vector2(32, 0)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Transitioner" parent="CanvasLayer" instance=ExtResource("9_qa6kl")]
+visible = false
 scene_to_load = "res://Levels/Shop/shop.tscn"

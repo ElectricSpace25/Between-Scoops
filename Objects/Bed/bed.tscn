@@ -1,14 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcyh7w4tq7uqc"]
+[gd_scene load_steps=6 format=3 uid="uid://bcyh7w4tq7uqc"]
 
 [ext_resource type="Script" path="res://Objects/Bed/bed.gd" id="1_c8wqq"]
 [ext_resource type="Texture2D" uid="uid://cnn07h3ooxvkc" path="res://Objects/Bed/bed.png" id="1_v6grc"]
 [ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/Interactable/interactable.tscn" id="3_amade"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkkq6"]
+size = Vector2(58, 13)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_okevl"]
 size = Vector2(58, 19)
 
-[node name="Bed" type="Node2D"]
+[node name="Bed" type="StaticBody2D"]
 script = ExtResource("1_c8wqq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 3.5)
+shape = SubResource("RectangleShape2D_kkkq6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_v6grc")
