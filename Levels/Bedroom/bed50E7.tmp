@@ -30,12 +30,12 @@ tile_set = ExtResource("1_m43ym")
 position = Vector2(96, 32)
 zoom = Vector2(3, 3)
 
-[node name="Andrew" parent="." instance=ExtResource("5_c20i7")]
+[node name="Roommate1" parent="." instance=ExtResource("5_c20i7")]
 visible = false
 z_index = 1
 position = Vector2(176, 0)
-roommate_id = "andrew"
-roommate_name = "Andrew"
+roommate_id = "roommate_1"
+roommate_name = "Roommate 1"
 dialogue_resource = SubResource("Resource_3g7up")
 
 [node name="Player" parent="." instance=ExtResource("2_lf4t1")]

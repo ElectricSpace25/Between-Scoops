@@ -5,6 +5,7 @@ extends Control
 @onready var dialogue_speaker: Label = $CanvasLayer/Panel/VBoxContainer/DialogueSpeaker
 @onready var dialogue_text: Label = $CanvasLayer/Panel/VBoxContainer/DialogueText
 @onready var dialogue_options: HBoxContainer = $CanvasLayer/Panel/VBoxContainer/DialogueOptions
+var font = load("res://UI/mago2.ttf")
 
 func _ready():
 	hide_dialogue()
@@ -25,7 +26,8 @@ func show_dialogue(speaker, text, options):
 	for option in options.keys():
 		var button = Button.new()
 		button.text = option
-		button.add_theme_font_size_override("font_size", 20)
+		button.add_theme_font_override("font", font)
+		button.add_theme_font_size_override("font_size", 32)
 		button.pressed.connect(_on_option_selected.bind(option))
 		dialogue_options.add_child(button)
 
@@ -37,7 +39,3 @@ func _on_option_selected(option):
 func hide_dialogue():
 	panel.visible = false
 	#Global.player.can_move = true
-
-# Close Dialogue Box if press x on UI
-func _on_close_button_pressed() -> void:
-	panel.visible = false

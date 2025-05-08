@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://dpftuibgtewvt"]
 
 [ext_resource type="Script" path="res://Entities/Roommates/roommate.gd" id="1_21hc2"]
-[ext_resource type="Texture2D" uid="uid://drhg1sq0wpfm4" path="res://Entities/Roommates/Roommate1.png" id="3_kijhm"]
+[ext_resource type="Texture2D" uid="uid://drhg1sq0wpfm4" path="res://Entities/Roommates/Andrew.png" id="3_kijhm"]
 [ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/Interactable/interactable.tscn" id="3_tg2fn"]
 [ext_resource type="FontFile" uid="uid://bvnxga24owger" path="res://UI/m3x6.ttf" id="4_ebwvv"]
 [ext_resource type="PackedScene" uid="uid://b4ktadv6dqwuh" path="res://UI/Dialogue/dialogue_manager.tscn" id="5_nhlll"]

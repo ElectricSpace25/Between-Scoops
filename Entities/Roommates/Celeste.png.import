@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drhg1sq0wpfm4"
-path="res://.godot/imported/Roommate1.png-8ee14887c04b9e72c3d30993bb795b86.ctex"
+uid="uid://dx6qvxq4d1354"
+path="res://.godot/imported/Celeste.png-a8daabed296e99e9568b5abcec23dc9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Roommates/Roommate1.png"
-dest_files=["res://.godot/imported/Roommate1.png-8ee14887c04b9e72c3d30993bb795b86.ctex"]
+source_file="res://Entities/Roommates/Celeste.png"
+dest_files=["res://.godot/imported/Celeste.png-a8daabed296e99e9568b5abcec23dc9b.ctex"]
 
 [params]
 

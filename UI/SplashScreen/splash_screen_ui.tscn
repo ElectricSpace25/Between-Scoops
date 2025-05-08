@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgwl71m4srbea"]
+[gd_scene load_steps=10 format=3 uid="uid://cgwl71m4srbea"]
 
 [ext_resource type="Script" path="res://UI/SplashScreen/splash_screen_ui.gd" id="1_wxn6b"]
-[ext_resource type="FontFile" uid="uid://bvnxga24owger" path="res://UI/m3x6.ttf" id="2_62763"]
 [ext_resource type="Texture2D" uid="uid://cr1yirvrsv68o" path="res://UI/SplashScreen/WASD.png" id="2_mk14i"]
+[ext_resource type="FontFile" uid="uid://bcducbuv65bdb" path="res://UI/mago3.ttf" id="2_vksdh"]
 [ext_resource type="Texture2D" uid="uid://c2edwr6l6vukm" path="res://UI/SplashScreen/Arrows.png" id="3_55gr5"]
+[ext_resource type="FontFile" uid="uid://ddk1u5fa2lrj" path="res://UI/mago1.ttf" id="3_q4mdn"]
+[ext_resource type="FontFile" uid="uid://cicibgt41ljx6" path="res://UI/mago2.ttf" id="6_pd7uo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4o2i"]
 bg_color = Color(0.0784314, 0.286275, 0.388235, 0.945098)
@@ -61,7 +63,7 @@ theme_override_constants/separation = 10
 [node name="Title" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 2
-theme_override_fonts/font = ExtResource("2_62763")
+theme_override_fonts/font = ExtResource("2_vksdh")
 theme_override_font_sizes/font_size = 64
 text = "Controls"
 horizontal_alignment = 1
@@ -70,7 +72,7 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(700, 10)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("2_62763")
+theme_override_fonts/font = ExtResource("3_q4mdn")
 theme_override_font_sizes/font_size = 48
 text = "Use WASD or arrow keys to move around"
 horizontal_alignment = 1
@@ -92,7 +94,7 @@ stretch_mode = 5
 
 [node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_62763")
+theme_override_fonts/font = ExtResource("3_q4mdn")
 theme_override_font_sizes/font_size = 48
 text = "Or"
 horizontal_alignment = 1
@@ -108,7 +110,7 @@ custom_minimum_size = Vector2(300, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
-theme_override_fonts/font = ExtResource("2_62763")
+theme_override_fonts/font = ExtResource("6_pd7uo")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/hover = SubResource("StyleBoxFlat_q1ja0")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wjxbc")

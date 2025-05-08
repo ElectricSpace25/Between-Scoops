@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_262ky"]
 [ext_resource type="Texture2D" uid="uid://dqelm10xyjohs" path="res://Entities/Player/MC_IceCream_Spritesheet.png" id="2_4sjg8"]
 [ext_resource type="Script" path="res://Entities/Player/interaction_area.gd" id="3_lx3da"]
-[ext_resource type="FontFile" uid="uid://bvnxga24owger" path="res://UI/m3x6.ttf" id="4_65hvr"]
+[ext_resource type="FontFile" uid="uid://cicibgt41ljx6" path="res://UI/mago2.ttf" id="4_gt3v6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7c3wq"]
 size = Vector2(19, 6.5)
@@ -244,7 +244,7 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 radius = 16.0312
 
 [sub_resource type="LabelSettings" id="LabelSettings_e35g4"]
-font = ExtResource("4_65hvr")
+font = ExtResource("4_gt3v6")
 shadow_color = Color(0, 0, 0, 0.145098)
 
 [node name="Player" type="CharacterBody2D"]

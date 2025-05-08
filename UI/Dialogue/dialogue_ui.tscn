@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxelh45iuyxi7"]
+[gd_scene load_steps=7 format=3 uid="uid://cxelh45iuyxi7"]
 
 [ext_resource type="Script" path="res://UI/Dialogue/dialogue_ui.gd" id="1_p1jqf"]
+[ext_resource type="FontFile" uid="uid://bcducbuv65bdb" path="res://UI/mago3.ttf" id="2_5l2jf"]
+[ext_resource type="FontFile" uid="uid://ddk1u5fa2lrj" path="res://UI/mago1.ttf" id="3_2kkmu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hoyef"]
 bg_color = Color(0.2, 0.223529, 0.360784, 1)
@@ -8,6 +10,14 @@ border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_0sbir"]
+font = ExtResource("2_5l2jf")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_ckxek"]
+font = ExtResource("3_2kkmu")
+font_size = 32
 
 [node name="DialogueUI" type="Control"]
 layout_mode = 3
@@ -35,40 +45,27 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_hoyef")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 1110.0
-offset_bottom = 150.0
-theme_override_constants/separation = 15
+offset_left = 14.0
+offset_top = 11.0
+offset_right = 1118.0
+offset_bottom = 155.0
+theme_override_constants/separation = 5
 
 [node name="DialogueSpeaker" type="Label" parent="CanvasLayer/Panel/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
 text = "Roommate Name"
+label_settings = SubResource("LabelSettings_0sbir")
 
 [node name="DialogueText" type="Label" parent="CanvasLayer/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 1
-theme_override_font_sizes/font_size = 20
 text = "Dialog Text..."
-horizontal_alignment = 1
+label_settings = SubResource("LabelSettings_ckxek")
+autowrap_mode = 2
 
 [node name="DialogueOptions" type="HBoxContainer" parent="CanvasLayer/Panel/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
 theme_override_constants/separation = 20
 alignment = 1
-
-[node name="CloseButton" type="Button" parent="CanvasLayer/Panel"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -38.0
-offset_top = 2.0
-offset_right = -2.0
-offset_bottom = 38.0
-grow_horizontal = 0
-theme_override_font_sizes/font_size = 20
-text = "X"
-
-[connection signal="pressed" from="CanvasLayer/Panel/CloseButton" to="." method="_on_close_button_pressed"]

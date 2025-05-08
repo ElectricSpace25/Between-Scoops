@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccsd7ujjcfxi1"
-path="res://.godot/imported/Roommate3.png-bf341d6c9a99be6f5c510e8cda91adcb.ctex"
+uid="uid://drhg1sq0wpfm4"
+path="res://.godot/imported/Andrew.png-f08d1b4c2c6bc18b1747f8b564bde5b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Roommates/Roommate3.png"
-dest_files=["res://.godot/imported/Roommate3.png-bf341d6c9a99be6f5c510e8cda91adcb.ctex"]
+source_file="res://Entities/Roommates/Andrew.png"
+dest_files=["res://.godot/imported/Andrew.png-f08d1b4c2c6bc18b1747f8b564bde5b1.ctex"]
 
 [params]
 

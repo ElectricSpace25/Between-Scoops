@@ -24,12 +24,12 @@ func _ready():
 	
 	# Change roommate sprite
 	match roommate_id:
-		"roommate_1":
-			sprite_2d.texture = preload("res://Entities/Roommates/Roommate1.png")
-		"roommate_2":
-			sprite_2d.texture = preload("res://Entities/Roommates/Roommate2.png")
-		"roommate_3":
-			sprite_2d.texture = preload("res://Entities/Roommates/Roommate3.png")
+		"andrew":
+			sprite_2d.texture = preload("res://Entities/Roommates/Andrew.png")
+		"celeste":
+			sprite_2d.texture = preload("res://Entities/Roommates/Celeste.png")
+		"alex":
+			sprite_2d.texture = preload("res://Entities/Roommates/Alex.png")
 
 # When player interacts with Roommate, start the dialogue
 func _on_interact():
