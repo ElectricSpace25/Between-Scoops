@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var level_timer: Timer = $"../LevelTimer"
 @onready var spawn_timer: Timer = $"../SpawnTimer"
-@onready var audio_manager = $"../AudioManager"
+@onready var audio_manager = $"../ShopAudioManager"
 @onready var summary_screen: Control = $"../CanvasLayer/SummaryScreenUI"
 
 var customer_slot_scene = load("res://Components/CustomerSlot/customer_slot.tscn")

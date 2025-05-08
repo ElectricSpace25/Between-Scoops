@@ -6,7 +6,7 @@ extends Node2D
 @onready var player_ice_cream = $"../../../Player/IceCream"
 @onready var patience_timer: Timer = $PatienceTimer
 @onready var patience_bar: ProgressBar = $ProgressBar
-@onready var audio_manager = $"../../../AudioManager"
+@onready var audio_manager = $"../../../ShopAudioManager"
 @onready var summary_screen_ui: Control = $"../../../CanvasLayer/SummaryScreenUI"
 var patience_time = 15
 
