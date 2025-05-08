@@ -14,10 +14,10 @@
 [ext_resource type="FontFile" uid="uid://bvnxga24owger" path="res://UI/m3x6.ttf" id="8_q1f54"]
 [ext_resource type="Script" path="res://Levels/Shop/money_label.gd" id="9_eikm8"]
 [ext_resource type="Script" path="res://Levels/Shop/TransitionButton.gd" id="9_ismv7"]
-[ext_resource type="PackedScene" uid="uid://df7ttqtk6frc8" path="res://Levels/Apartment/apartment.tscn" id="9_jb55j"]
 [ext_resource type="PackedScene" uid="uid://cgwl71m4srbea" path="res://UI/SplashScreen/splash_screen_ui.tscn" id="10_dlm8n"]
 [ext_resource type="PackedScene" uid="uid://6chsw8u06dp0" path="res://UI/SummaryScreen/summary_screen_ui.tscn" id="11_4cypd"]
 [ext_resource type="Script" path="res://Levels/Shop/day_label.gd" id="12_gb566"]
+[ext_resource type="PackedScene" uid="uid://cwgehyqj8jqo2" path="res://Levels/Bedroom/bedroom.tscn" id="17_qbxed"]
 [ext_resource type="PackedScene" uid="uid://cnwraulivxpoe" path="res://Components/AudioManager/audio_manager.tscn" id="18_pywiq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tqm5"]
@@ -153,7 +153,7 @@ script = ExtResource("12_gb566")
 visible = false
 offset_left = -8.0
 offset_right = -8.0
-scene_to_load = ExtResource("9_jb55j")
+scene_to_load = ExtResource("17_qbxed")
 
 [node name="TransitionButton" type="CheckButton" parent="CanvasLayer" node_paths=PackedStringArray("transitioner")]
 offset_left = 16.0

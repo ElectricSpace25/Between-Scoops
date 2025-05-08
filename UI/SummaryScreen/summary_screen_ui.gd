@@ -6,6 +6,7 @@ extends Control
 @onready var stats: Label = $Panel/MarginContainer/VBoxContainer/Stats
 @onready var home_button: Button = $Panel/MarginContainer/VBoxContainer/Button
 @onready var player: Node2D = $"../../Player"
+@onready var transitioner: Transitioner = $"../Transitioner"
 
 var profit = 0
 var customers_served = 0
@@ -41,6 +42,7 @@ func show_summary() -> void:
 	stats.text = "$" + str(profit) + " earned\n" + str(customers_served) + " customer(s) served\n" + str(customers_lost) + " customer(s) lost"
 	
 func _on_home_button_pressed() -> void:
-	if GlobalVariables.day < 5:
-		GlobalVariables.day += 1
-	get_tree().reload_current_scene()
+	GlobalVariables.day += 1
+	transitioner.visible = true
+	transitioner.set_next_animation(true)
+	
