@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://6chsw8u06dp0" path="res://UI/SummaryScreen/summary_screen_ui.tscn" id="11_4cypd"]
 [ext_resource type="Script" path="res://Levels/Shop/day_label.gd" id="12_gb566"]
 [ext_resource type="PackedScene" uid="uid://cwgehyqj8jqo2" path="res://Levels/Bedroom/bedroom.tscn" id="17_qbxed"]
-[ext_resource type="PackedScene" uid="uid://cnwraulivxpoe" path="res://Components/AudioManager/audio_manager.tscn" id="18_pywiq"]
+[ext_resource type="PackedScene" uid="uid://cnwraulivxpoe" path="res://Components/AudioManagers/shop_audio_manager.tscn" id="18_pywiq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tqm5"]
 font = ExtResource("8_q1f54")
@@ -172,7 +172,7 @@ one_shot = true
 wait_time = 3.0
 one_shot = true
 
-[node name="AudioManager" parent="." instance=ExtResource("18_pywiq")]
+[node name="ShopAudioManager" parent="." instance=ExtResource("18_pywiq")]
 
 [connection signal="toggled" from="CanvasLayer/TransitionButton" to="CanvasLayer/TransitionButton" method="_on_toggled"]
 [connection signal="timeout" from="LevelTimer" to="CustomerArea" method="_on_level_timer_timeout"]
