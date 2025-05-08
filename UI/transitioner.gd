@@ -11,6 +11,12 @@ class_name Transitioner
 # Make sure TextureRect is not visible when the game starts
 func _ready() -> void:
 	animation_tex.visible = false
+	
+# Cheat to instantly transition
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("cheat_transition"):
+		visible = true
+		set_next_animation(true)
 
 # TODO: Change button to actual cue for transition
 # Fades the animation based on a cue
