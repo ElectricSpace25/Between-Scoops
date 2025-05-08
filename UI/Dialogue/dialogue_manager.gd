@@ -3,11 +3,13 @@
 extends Node2D
 
 @onready var dialogue_ui: Control = $DialogueUI
+@onready var player: CharacterBody2D = $"../../Player"
 var npc : Node = null
 signal npc_leaving
 
 # Show Dialogue taken from the npc, calling dialogue_ui
 func show_dialogue(npc, text="", options={}):
+	player.can_move = false
 	if text != "":
 		# Shows an empty box
 		dialogue_ui.show_dialogue(npc.roommate_name, text, options)
@@ -20,6 +22,7 @@ func show_dialogue(npc, text="", options={}):
 
 # Hide Dialogue box, calling dialogue_ui
 func hide_dialogue():
+	player.can_move = true
 	dialogue_ui.hide_dialogue()
 
 # Dialogue state management
