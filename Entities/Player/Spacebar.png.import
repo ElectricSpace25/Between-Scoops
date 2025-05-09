@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4dejq4yiy13w"
-path="res://.godot/imported/E.png-dbacd34162266c1a81d612f2d1340c79.ctex"
+uid="uid://d3w7dodlhc3dn"
+path="res://.godot/imported/Spacebar.png-bf4eff18b4a1ce4942109bd98118cb9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/SplashScreen/E.png"
-dest_files=["res://.godot/imported/E.png-dbacd34162266c1a81d612f2d1340c79.ctex"]
+source_file="res://Entities/Player/Spacebar.png"
+dest_files=["res://.godot/imported/Spacebar.png-bf4eff18b4a1ce4942109bd98118cb9f.ctex"]
 
 [params]
 

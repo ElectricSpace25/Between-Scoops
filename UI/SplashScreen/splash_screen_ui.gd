@@ -13,7 +13,7 @@ extends Control
 @onready var customer_area: Node2D = $"../../CustomerArea"
 @onready var player: Node2D = $"../../Player"
 
-const E = preload("res://UI/SplashScreen/E.png")
+const spacebar = preload("res://UI/SplashScreen/Spacebar.png")
 const M_3X_6 = preload("res://UI/m3x6.ttf")
 
 # Make Splash Screen Visible on load
@@ -30,10 +30,10 @@ func _ready() -> void:
 # User pressed Next
 func _on_next_button_pressed() -> void:
 	# Change the displayed directions
-	directions.text = "Press E to interact"
+	directions.text = "Press SPACEBAR to interact"
 	
 	# Set a new image
-	texture_rect.texture = E
+	texture_rect.texture = spacebar
 	
 	# Delete second image and label
 	texture_rect_2.queue_free()

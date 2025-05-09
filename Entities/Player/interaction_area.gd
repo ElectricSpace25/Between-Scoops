@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var interact_label: Label = $"../InteractLabel"
+@onready var interact_icon: Sprite2D = $"../InteractIcon"
 var current_interactions = []
 var can_interact = true
 
@@ -17,9 +17,9 @@ func _process(_delta: float) -> void:
 		for interaction in current_interactions:
 			interaction.get_parent().modulate = Color(1, 1, 1)
 		current_interactions[0].get_parent().modulate = Color(1.1, 1.1, 1.1)
-		interact_label.show()
+		interact_icon.show()
 	else:
-		interact_label.hide()
+		interact_icon.hide()
 
 func _sort_by_nearest(area1, area2):
 	var area1_dist = global_position.distance_to(area1.global_position)

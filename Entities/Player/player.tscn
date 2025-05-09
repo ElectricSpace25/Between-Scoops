@@ -1,9 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://c8ldqs2ik8dbq"]
+[gd_scene load_steps=31 format=3 uid="uid://c8ldqs2ik8dbq"]
 
 [ext_resource type="Script" path="res://Entities/Player/player.gd" id="1_262ky"]
 [ext_resource type="Texture2D" uid="uid://dqelm10xyjohs" path="res://Entities/Player/MC_IceCream_Spritesheet.png" id="2_4sjg8"]
 [ext_resource type="Script" path="res://Entities/Player/interaction_area.gd" id="3_lx3da"]
-[ext_resource type="FontFile" uid="uid://cicibgt41ljx6" path="res://UI/mago2.ttf" id="4_gt3v6"]
+[ext_resource type="Texture2D" uid="uid://d3w7dodlhc3dn" path="res://Entities/Player/Spacebar.png" id="5_2xoyd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7c3wq"]
 size = Vector2(19, 6.5)
@@ -243,10 +243,6 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 [sub_resource type="CircleShape2D" id="CircleShape2D_prq3f"]
 radius = 16.0312
 
-[sub_resource type="LabelSettings" id="LabelSettings_e35g4"]
-font = ExtResource("4_gt3v6")
-shadow_color = Color(0, 0, 0, 0.145098)
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_262ky")
 
@@ -278,15 +274,10 @@ script = ExtResource("3_lx3da")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_prq3f")
 
-[node name="InteractLabel" type="Label" parent="."]
-offset_left = -20.0
-offset_top = -34.0
-offset_right = 20.0
-offset_bottom = -11.0
-text = "[E]"
-label_settings = SubResource("LabelSettings_e35g4")
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="InteractIcon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -20)
+texture = ExtResource("5_2xoyd")
 
 [node name="HUD" type="CanvasLayer" parent="."]
 visible = false
