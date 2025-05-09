@@ -6,17 +6,21 @@ class_name Transitioner
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 
 @export var scene_switch_anim : String = "fade_out"
-@export_file("*.tscn") var scene_to_load: String
+var scene_to_load: String
 
 # Make sure TextureRect is not visible when the game starts
 func _ready() -> void:
 	animation_tex.visible = false
 	
-# Cheat to instantly transition
+func transition_to(scene: String):
+	scene_to_load = scene
+	visible = true
+	set_next_animation(true)
+	
+# Cheat to instantly transition to bedroom
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("cheat_transition"):
-		visible = true
-		set_next_animation(true)
+		transition_to("res://Levels/Bedroom/bedroom.tscn")	
 
 # TODO: Change button to actual cue for transition
 # Fades the animation based on a cue

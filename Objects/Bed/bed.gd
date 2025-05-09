@@ -10,5 +10,4 @@ func _ready():
 func _on_interact():
 	if bedroom.can_sleep == true:
 		GlobalVariables.day += 1
-		transitioner.visible = true
-		transitioner.set_next_animation(true)
+		transitioner.transition_to("res://Levels/Shop/shop.tscn")

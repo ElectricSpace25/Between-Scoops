@@ -7,6 +7,7 @@ extends Node2D
 @onready var celeste: CharacterBody2D = $Celeste
 @onready var alex: CharacterBody2D = $Alex
 @onready var andrew2: CharacterBody2D = $Andrew2
+@onready var transitioner: Transitioner = $CanvasLayer/Transitioner
 
 var can_sleep = false
 
@@ -81,4 +82,4 @@ func _on_alex_npc_leaving() -> void:
 
 func _on_andrew2_npc_leaving() -> void:
 	andrew2.queue_free()
-	#TODO: SWITCH TO PARTY SCENE
+	transitioner.transition_to("res://Levels/Party/party.tscn")

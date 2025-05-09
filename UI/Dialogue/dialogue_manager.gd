@@ -43,7 +43,7 @@ func handle_dialogue_choice(option):
 			npc.set_dialogue_tree(npc.current_branch_index + 1)
 		hide_dialogue()
 	elif next_state == "leave":
-		# Signals roommate to leave and allows player to sleep
+		# Signals roommate to leave
 		npc.set_dialogue_state("start")
 		hide_dialogue()
 		npc_leaving.emit()
