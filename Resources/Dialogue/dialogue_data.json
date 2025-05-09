@@ -6,7 +6,7 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "Hey roomie! I just wanted to remind you that rent is due this Friday. It's $??? for each of us.",
+						"text": "Hey roomie! I just wanted to remind you that rent is due this Friday. I think we just need $100 more from you.",
 						"options": {
 							"Got it!": "story_1",
 							"Oh no...": "story_1",
@@ -21,25 +21,13 @@
 					},
 					{
 						"state": "story_2",
-						"text": "Yeah, I'm going to go cry now.",
+						"text": "I hope you get lots of tips!.",
 						"options": {
-							"Bye!": "leave"
+							"Me too": "leave"
 						}
 					}
 				],
-			},
-			{
-				"branch_id": "andrew_2",
-				"dialogues": [
-					{
-						"state": "start",
-						"text": "I'm crying.",
-						"options": {
-							"Okay.": "exit"
-						}
-					},
-				],
-			},
+			}
 		],
 	},
 	
@@ -84,9 +72,23 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "Hey there! Could you come into the living room real quick? I need your help with something.",
+						"text": "Hey there!",
 						"options": {
-							"Okay.": "leave"
+							"Hey": "check_rent"
+						}
+					},
+					{
+						"state": "win",
+						"text": "Could you come into the living room real quick? I need your help with something.",
+						"options": {
+							"Okay": "leave"
+						}
+					},
+					{
+						"state": "lose",
+						"text": "You don't have enough rent plz leave.",
+						"options": {
+							":()": "leave"
 						}
 					},
 				],

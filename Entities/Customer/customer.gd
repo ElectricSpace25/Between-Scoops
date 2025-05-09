@@ -68,8 +68,9 @@ func _on_interact():
 	if player_ice_cream.has_cone && player_ice_cream.scoops == ice_cream.scoops && player_toppings == customer_toppings:
 		#print("Correct order!")
 		summary_screen_ui.customers_served += 1
-		GlobalVariables.money += 1
-		summary_screen_ui.profit += 1
+		var profit = (ice_cream.scoops.size() * 1) + (ice_cream.toppings.size() * 0.5)
+		GlobalVariables.money += profit
+		summary_screen_ui.profit += profit
 		player_ice_cream.clear()
 		audio_manager.play_coins()
 		queue_free()

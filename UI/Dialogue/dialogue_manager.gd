@@ -55,8 +55,12 @@ func handle_dialogue_choice(option):
 		hide_dialogue()
 		npc_leaving.emit()
 	elif next_state == "check_rent":
-		pass
-		#if GlobalVariables.money >= 
+		print("checking rent")
+		if GlobalVariables.money >= 100:
+			npc.set_dialogue_state("win")
+		else:
+			npc.set_dialogue_state("lose")
+		show_dialogue(npc)
 	elif next_state == "exit":
 		# Reset the branch to the start
 		npc.set_dialogue_state("start")

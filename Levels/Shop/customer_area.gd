@@ -58,7 +58,6 @@ func attempt_spawn_customer():
 
 func _on_level_timer_timeout():
 	# Level timeout
-	print("LEVEL TIMED OUT")
 	spawn_timer.stop()
 	audio_manager.play_closing()
 	for slot in get_children():
