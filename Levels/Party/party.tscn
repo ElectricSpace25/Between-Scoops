@@ -416,6 +416,7 @@ zoom = Vector2(3, 3)
 [node name="Player" parent="." instance=ExtResource("2_8qtxt")]
 z_index = 1
 position = Vector2(96, 128)
+clothing = "home"
 
 [node name="PartyAudioManager" parent="." instance=ExtResource("3_dtdtv")]
 

@@ -2,18 +2,15 @@ extends CharacterBody2D
 
 var move_speed : float = 125
 var can_move = true # added to pause movement when interacting with roommates
+@export var clothing = "shop"
 
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
-
-# Player HUD UI components
-@onready var quest_tracker: ColorRect = $HUD/QuestTracker
-@onready var title: Label = $HUD/QuestTracker/VBoxContainer/Title
-@onready var objectives: VBoxContainer = $HUD/QuestTracker/VBoxContainer/Objectives
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 func _ready() -> void:
-	#Global.player = self
-	quest_tracker.visible = false
+	if clothing == "home":
+		sprite_2d.texture = preload("res://Entities/Player/MC_ShortHair_Home_Spritesheet.png")
 
 func _physics_process(_delta):
 	# Move

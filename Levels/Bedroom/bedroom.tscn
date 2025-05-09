@@ -80,6 +80,7 @@ dialogue_resource = SubResource("Resource_3g7up")
 [node name="Player" parent="." instance=ExtResource("2_lf4t1")]
 z_index = 1
 position = Vector2(96, 32)
+clothing = "home"
 
 [node name="Door" type="Sprite2D" parent="."]
 position = Vector2(176, -32)
