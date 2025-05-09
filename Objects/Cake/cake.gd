@@ -5,6 +5,7 @@ extends Node2D
 @onready var player_interaction_icon: Sprite2D = $"../Player/InteractionIcon"
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var camera_2d: Camera2D = $"../Camera2D"
+@onready var transitioner: Transitioner = $"../CanvasLayer/Transitioner"
 
 var talked = 0
 
@@ -21,7 +22,7 @@ func _on_interact():
 		await get_tree().create_timer(0.5).timeout
 		sprite_2d.frame = 2
 		await get_tree().create_timer(2).timeout
-		get_tree().quit()
+		transitioner.transition_to("res://Levels/End/end.tscn")
 
 func _on_andrew_party_talked() -> void:
 	talked += 1

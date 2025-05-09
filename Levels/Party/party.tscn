@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://c4c5e4o2kql8t"]
+[gd_scene load_steps=18 format=4 uid="uid://c4c5e4o2kql8t"]
 
 [ext_resource type="Script" path="res://Levels/Party/party.gd" id="1_nlnc3"]
 [ext_resource type="Texture2D" uid="uid://dsfj43bi0ob80" path="res://Levels/FloorsWallsDoorsWindows.png" id="1_vuump"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dpftuibgtewvt" path="res://Entities/Roommates/Roommate.tscn" id="5_ktfj4"]
 [ext_resource type="Script" path="res://Resources/Dialogue/dialogue.gd" id="6_fvep2"]
 [ext_resource type="PackedScene" uid="uid://ck18x4ustsgvu" path="res://Objects/Cake/cake.tscn" id="8_qwum8"]
+[ext_resource type="PackedScene" uid="uid://cymdec3ilt4i0" path="res://UI/transitioner.tscn" id="10_0ar8e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esada"]
 texture = ExtResource("1_vuump")
@@ -439,6 +440,11 @@ dialogue_resource = SubResource("Resource_axo3v")
 [node name="Cake" parent="." instance=ExtResource("8_qwum8")]
 z_index = 2
 position = Vector2(96, 39)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transitioner" parent="CanvasLayer" instance=ExtResource("10_0ar8e")]
+z_index = 10
 
 [connection signal="party_talked" from="Andrew" to="Cake" method="_on_andrew_party_talked"]
 [connection signal="party_talked" from="Celeste" to="Cake" method="_on_celeste_party_talked"]

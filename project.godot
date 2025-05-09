@@ -22,7 +22,7 @@ GlobalVariables="*res://global_variables.gd"
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/scale_mode="integer"
 
 [file_customization]
 

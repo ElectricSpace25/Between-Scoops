@@ -21,11 +21,33 @@
 					},
 					{
 						"state": "story_2",
-						"text": "I hope you get lots of tips!.",
+						"text": "What flavor are you hoping for?",
 						"options": {
-							"Me too": "leave"
+							"Mint": "mint",
+							"Lemon": "lemon"
 						}
-					}
+					},
+					{
+						"state": "mint",
+						"text": "Ooh, mint sounds good!",
+						"options": {
+							"Yum": "story_3"
+						}
+					},
+					{
+						"state": "lemon",
+						"text": "Hmm, I'm hoping for mint!",
+						"options": {
+							"Yum": "story_3"
+						}
+					},
+					{
+						"state": "story_3",
+						"text": "Alright, well, I'll let you sleep. I hope you make lots of tips tomorrow! See ya!",
+						"options": {
+							"Bye!": "leave"
+						}
+					},
 				],
 			}
 		],
@@ -38,9 +60,39 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "Hi I'm Celeste and I'm saying things.",
+						"text": "Hi... Uh... will you be home on Friday night? We might need your help moving furniture and stuff that we bought for the living room.",
 						"options": {
-							"Okay.": "leave"
+							"I will be there": "there",
+							"I might make plans": "plans"
+						}
+					},
+					{
+						"state": "plans",
+						"text": "NO! I mean, uh... maybe you could make plans for a different day? We really need your help...",
+						"options": {
+							"Okay, I will be there": "there",
+							"I guess": "there"
+						}
+					},
+					{
+						"state": "there",
+						"text": "Cool.",
+						"options": {
+							"Cool": "story_1",
+						}
+					},
+					{
+						"state": "story_1",
+						"text": "...",
+						"options": {
+							"...": "story_2",
+						}
+					},
+					{
+						"state": "story_2",
+						"text": "Ok... I'm going to bed now...",
+						"options": {
+							"Goodnight": "leave",
 						}
 					},
 				],
@@ -55,9 +107,47 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "Hi I'm Alex and I'm saying other things.",
+						"text": "How's it goin at that new ice cream shop?",
 						"options": {
-							"Okay.": "leave"
+							"Stressful": "stress",
+							"Easy peasy lemon squeezy": "ez"
+						}
+					},
+					{
+						"state": "stress",
+						"text": "Ugh, yeah, we've all been struggling to make ends meet, but make sure to take care of yourself too.",
+						"options": {
+							"I will!": "story_1"
+						}
+					},
+					{
+						"state": "ez",
+						"text": "Are you sure? I visited the ice cream shop yesterday and you gave me the wrong order... just kidding! Haha!",
+						"options": {
+							"*laugh*": "story_1",
+							"*roll your eyes*": "story_1"
+						}
+					},
+					{
+						"state": "story_1",
+						"text": "Before you sleep, I was wondering if you have any bakery recommendations? I've been craving something sweet.",
+						"options": {
+							"I know a great one!": "bakery",
+							"*shrug*": "shrug"
+						}
+					},
+					{
+						"state": "bakery",
+						"text": "Great, thanks! Maybe I'll get you something. Anyways, goodnight!",
+						"options": {
+							"*Goodnight*": "leave"
+						}
+					},
+					{
+						"state": "shrug",
+						"text": "Well, I'll figure something out. Anyways, goodnight!",
+						"options": {
+							"Goodnight": "leave"
 						}
 					},
 				],
@@ -86,9 +176,48 @@
 					},
 					{
 						"state": "lose",
-						"text": "You don't have enough rent plz leave.",
+						"text": "So, uh, this is kind of hard to say...",
 						"options": {
-							":()": "leave"
+							"What is it?": "story_1",
+							"Just spit it out": "story_1"
+						}
+					},
+					{
+						"state": "story_1",
+						"text": "You don't have enough money for rent this month. Things are pretty tight, so...",
+						"options": {
+							"So...?": "story_2",
+							"...": "story_2"
+						}
+					},
+					{
+						"state": "story_2",
+						"text": "...I'm really sorry, but you'll have to move out.",
+						"options": {
+							"Oh...": "story_3"
+						}
+					},
+					{
+						"state": "story_3",
+						"text": "It really was nice having you as a roommate!",
+						"options": {
+							"You too": "story_4",
+							"...": "story_4"
+						}
+					},
+					{
+						"state": "story_4",
+						"text": "Oh, and by the way...",
+						"options": {
+							"...?": "story_5"
+						}
+					},
+					{
+						"state": "story_5",
+						"text": "...Happy Birthday.",
+						"options": {
+							"Thanks": "leave",
+							"...": "leave"
 						}
 					},
 				],
@@ -103,9 +232,9 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "Happy birthday from Andrew!",
+						"text": "Happy birthday! We're all proud of you for working so hard at the ice cream shop. Relax and enjoy the party as a reward!",
 						"options": {
-							"Thanks!": "end_branch_party"
+							"Thanks so much!": "end_branch_party"
 						}
 					}
 				],
@@ -115,9 +244,9 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "Talk to the others!",
+						"text": "Remember to blow out your candles after talking to everyone!",
 						"options": {
-							"Okay.": "exit"
+							"Okay": "exit"
 						}
 					},
 				],
@@ -132,9 +261,9 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "Happy birthday from Celeste!",
+						"text": "Hi... Happy birthday. Did we surprise you? We spent yesterday preparing for it.",
 						"options": {
-							"Thanks!": "end_branch_party"
+							"Thanks for planning this for me!": "end_branch_party"
 						}
 					}
 				],
@@ -144,9 +273,9 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "Talk to the others!",
+						"text": "That cake looks really good...",
 						"options": {
-							"Okay.": "exit"
+							"It really does": "exit"
 						}
 					},
 				],
@@ -161,9 +290,9 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "Happy birthday from Alex!",
+						"text": "Happy birthday, champ! How do you like the cake I got?",
 						"options": {
-							"Thanks!": "end_branch_party"
+							"It looks great!": "end_branch_party"
 						}
 					}
 				],
@@ -173,9 +302,9 @@
 				"dialogues": [
 					{
 						"state": "start",
-						"text": "Talk to the others!",
+						"text": "Don't leave the others hanging!",
 						"options": {
-							"Okay.": "exit"
+							"I would never!": "exit"
 						}
 					},
 				],

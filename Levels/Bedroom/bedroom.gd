@@ -83,8 +83,7 @@ func _on_alex_npc_leaving() -> void:
 func _on_andrew2_npc_leaving() -> void:
 	if GlobalVariables.money >= 100:
 		# Win game, go to party
-		andrew2.queue_free()
 		transitioner.transition_to("res://Levels/Party/party.tscn")
 	else:
 		# Lose game
-		get_tree().quit()
+		transitioner.transition_to("res://Levels/End/end.tscn")
