@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://ck18x4ustsgvu"]
 
 [ext_resource type="Script" path="res://Objects/Cake/cake.gd" id="1_w8kkr"]
-[ext_resource type="Texture2D" uid="uid://ciw5i6xt6rn18" path="res://Objects/Cake/Cake.png" id="2_84m32"]
 [ext_resource type="PackedScene" uid="uid://bkwc4k21l5w51" path="res://Components/Interactable/interactable.tscn" id="2_i23x0"]
+[ext_resource type="Texture2D" uid="uid://djdbcvpmhq6q5" path="res://Objects/Cake/CakeSpritesheet.png" id="2_suvap"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6ngb"]
 size = Vector2(32, 22)
@@ -11,7 +11,9 @@ size = Vector2(32, 22)
 script = ExtResource("1_w8kkr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_84m32")
+texture = ExtResource("2_suvap")
+hframes = 2
+vframes = 2
 
 [node name="Interactable" parent="." instance=ExtResource("2_i23x0")]
 

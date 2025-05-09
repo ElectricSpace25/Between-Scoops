@@ -274,7 +274,7 @@ script = ExtResource("3_lx3da")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CircleShape2D_prq3f")
 
-[node name="InteractIcon" type="Sprite2D" parent="."]
+[node name="InteractionIcon" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(0, -20)
 texture = ExtResource("5_2xoyd")

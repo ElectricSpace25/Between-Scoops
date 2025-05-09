@@ -103,7 +103,7 @@
 						"state": "start",
 						"text": "Happy birthday from Andrew!",
 						"options": {
-							"Thanks!": "end_branch"
+							"Thanks!": "end_branch_party"
 						}
 					}
 				],
@@ -132,7 +132,7 @@
 						"state": "start",
 						"text": "Happy birthday from Celeste!",
 						"options": {
-							"Thanks!": "end_branch"
+							"Thanks!": "end_branch_party"
 						}
 					}
 				],
@@ -161,7 +161,7 @@
 						"state": "start",
 						"text": "Happy birthday from Alex!",
 						"options": {
-							"Thanks!": "end_branch"
+							"Thanks!": "end_branch_party"
 						}
 					}
 				],

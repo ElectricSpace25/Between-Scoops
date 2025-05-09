@@ -415,7 +415,7 @@ position = Vector2(96, 128)
 [node name="PartyAudioManager" parent="." instance=ExtResource("3_dtdtv")]
 
 [node name="Andrew" parent="." instance=ExtResource("5_ktfj4")]
-position = Vector2(25, 99)
+position = Vector2(28, 86)
 roommate_id = "andrew_party"
 roommate_name = "Andrew"
 dialogue_resource = SubResource("Resource_qse0n")
@@ -435,3 +435,7 @@ dialogue_resource = SubResource("Resource_axo3v")
 [node name="Cake" parent="." instance=ExtResource("8_qwum8")]
 z_index = 2
 position = Vector2(96, 39)
+
+[connection signal="party_talked" from="Andrew" to="Cake" method="_on_andrew_party_talked"]
+[connection signal="party_talked" from="Celeste" to="Cake" method="_on_celeste_party_talked"]
+[connection signal="party_talked" from="Alex" to="Cake" method="_on_alex_party_talked"]

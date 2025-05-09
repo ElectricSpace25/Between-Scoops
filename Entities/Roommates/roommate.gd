@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var interactable: Area2D = $Interactable
 @onready var sprite_2d: Sprite2D = $Sprite2D
 signal npc_leaving
+signal party_talked
 
 # Add these values in the inspector panel for each roommate!
 @export var roommate_id : String # use for logic checks and quest/dialogue assignments
@@ -68,3 +69,6 @@ func set_dialogue_state(state):
 
 func _on_dialogue_manager_npc_leaving() -> void:
 	npc_leaving.emit()
+
+func _on_dialogue_manager_party_talked() -> void:
+	party_talked.emit()

@@ -6,6 +6,7 @@ extends Node2D
 @onready var player: CharacterBody2D = $"../../Player"
 var npc : Node = null
 signal npc_leaving
+signal party_talked
 
 # Show Dialogue taken from the npc, calling dialogue_ui
 func show_dialogue(npc, text="", options={}):
@@ -42,11 +43,20 @@ func handle_dialogue_choice(option):
 		if npc.current_branch_index < npc.dialogue_resource.get_npc_dialogue(npc.roommate_id).size() - 1:
 			npc.set_dialogue_tree(npc.current_branch_index + 1)
 		hide_dialogue()
+	elif next_state == "end_branch_party":
+		# Move to the next dialogue branch AND send party signal
+		if npc.current_branch_index < npc.dialogue_resource.get_npc_dialogue(npc.roommate_id).size() - 1:
+			npc.set_dialogue_tree(npc.current_branch_index + 1)
+		hide_dialogue()
+		party_talked.emit()
 	elif next_state == "leave":
 		# Signals roommate to leave
 		npc.set_dialogue_state("start")
 		hide_dialogue()
 		npc_leaving.emit()
+	elif next_state == "check_rent":
+		pass
+		#if GlobalVariables.money >= 
 	elif next_state == "exit":
 		# Reset the branch to the start
 		npc.set_dialogue_state("start")
