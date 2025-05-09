@@ -8,3 +8,6 @@ func play_background():
 
 func play_horn():
 	horn.play()
+
+func _on_background_finished() -> void:
+	background.play()

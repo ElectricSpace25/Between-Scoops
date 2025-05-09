@@ -8,3 +8,6 @@ func play_background():
 
 func play_knock():
 	knock.play()
+
+func _on_background_finished() -> void:
+	background.play()

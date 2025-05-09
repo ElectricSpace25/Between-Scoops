@@ -24,13 +24,12 @@ func _ready():
 	dialogue_manager.npc = self # initialize NPC reference
 	
 	# Change roommate sprite
-	match roommate_id:
-		"andrew":
-			sprite_2d.texture = preload("res://Entities/Roommates/Andrew.png")
-		"celeste":
-			sprite_2d.texture = preload("res://Entities/Roommates/Celeste.png")
-		"alex":
-			sprite_2d.texture = preload("res://Entities/Roommates/Alex.png")
+	if roommate_id.contains("andrew"):
+		sprite_2d.texture = preload("res://Entities/Roommates/Andrew.png")
+	elif roommate_id.contains("celeste"):
+		sprite_2d.texture = preload("res://Entities/Roommates/Celeste.png")
+	elif roommate_id.contains("alex"):
+		sprite_2d.texture = preload("res://Entities/Roommates/Alex.png")
 
 # When player interacts with Roommate, start the dialogue
 func _on_interact():

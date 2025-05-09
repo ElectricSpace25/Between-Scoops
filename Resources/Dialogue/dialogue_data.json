@@ -92,5 +92,92 @@
 				],
 			},
 		],
+	},
+	
+	"andrew_party": {
+		"tree": [
+			{
+				"branch_id": "andrew_party_1",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "Happy birthday from Andrew!",
+						"options": {
+							"Thanks!": "end_branch"
+						}
+					}
+				],
+			},
+			{
+				"branch_id": "andrew_party_2",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "Talk to the others!",
+						"options": {
+							"Okay.": "exit"
+						}
+					},
+				],
+			},
+		],
+	},
+	
+	"celeste_party": {
+		"tree": [
+			{
+				"branch_id": "celeste_party_1",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "Happy birthday from Celeste!",
+						"options": {
+							"Thanks!": "end_branch"
+						}
+					}
+				],
+			},
+			{
+				"branch_id": "celeste_party_2",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "Talk to the others!",
+						"options": {
+							"Okay.": "exit"
+						}
+					},
+				],
+			},
+		],
+	},
+	
+	"alex_party": {
+		"tree": [
+			{
+				"branch_id": "alex_party_1",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "Happy birthday from Alex!",
+						"options": {
+							"Thanks!": "end_branch"
+						}
+					}
+				],
+			},
+			{
+				"branch_id": "alex_party_2",
+				"dialogues": [
+					{
+						"state": "start",
+						"text": "Talk to the others!",
+						"options": {
+							"Okay.": "exit"
+						}
+					},
+				],
+			},
+		],
 	}
 }
