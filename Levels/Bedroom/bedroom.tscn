@@ -33,7 +33,7 @@ tile_set = ExtResource("1_m43ym")
 
 [node name="MiddleLayer" type="TileMapLayer" parent="TileMap"]
 z_index = 1
-tile_map_data = PackedByteArray("AAABAP//AQAEAAAAAAABAAAAAQAFAAAAAAACAAAAAQAFAAMAAAACAP//AQAEAAMAAAA=")
+tile_map_data = PackedByteArray("AAABAP//AQAEAAAAAAABAAAAAQAFAAAAAAACAAAAAQAFAAMAAAACAP//AQAEAAMAAAAHAAAAAQABAAUAAAAHAAEAAQACAAUAAAAGAAAAAQACAAEAAAAGAAEAAQADAAEAAAA=")
 tile_set = ExtResource("1_m43ym")
 
 [node name="TopLayer" type="TileMapLayer" parent="TileMap"]
