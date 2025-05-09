@@ -444,6 +444,7 @@ position = Vector2(96, 39)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Transitioner" parent="CanvasLayer" instance=ExtResource("10_0ar8e")]
+visible = false
 z_index = 10
 
 [connection signal="party_talked" from="Andrew" to="Cake" method="_on_andrew_party_talked"]
