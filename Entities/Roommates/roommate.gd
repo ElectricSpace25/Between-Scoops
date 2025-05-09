@@ -33,7 +33,7 @@ func _ready():
 
 # When player interacts with Roommate, start the dialogue
 func _on_interact():
-	print("Interacting with " + roommate_name)
+	#print("Interacting with " + roommate_name)
 	start_dialogue()
 
 # Get roommate's individual dialogue
@@ -53,7 +53,7 @@ func get_current_dialogue():
 	if current_branch_index < roommate_dialogues.size():
 		for dialogue in roommate_dialogues[current_branch_index]["dialogues"]:
 			if dialogue["state"] == current_state:
-				print("Roommate says: " + dialogue["text"])
+				#print("Roommate says: " + dialogue["text"])
 				return dialogue
 	return null
 

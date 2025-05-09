@@ -6,7 +6,8 @@
 [ext_resource type="FontFile" uid="uid://bvnxga24owger" path="res://UI/m3x6.ttf" id="4_ebwvv"]
 [ext_resource type="PackedScene" uid="uid://b4ktadv6dqwuh" path="res://UI/Dialogue/dialogue_manager.tscn" id="5_nhlll"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8481n"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i26p5"]
+size = Vector2(20, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7c3wq"]
 size = Vector2(17, 30)
@@ -148,7 +149,7 @@ script = ExtResource("1_21hc2")
 [node name="Interactable" parent="." instance=ExtResource("3_tg2fn")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
-shape = SubResource("CircleShape2D_8481n")
+shape = SubResource("RectangleShape2D_i26p5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -1)
