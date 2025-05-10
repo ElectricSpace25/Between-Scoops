@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cllme88n8fx5r"
-path="res://.godot/imported/MC_LongHair_IceCream_Spritesheet_.png-b9b3ac1eeb3f564dea466b96f2ae11b0.ctex"
+uid="uid://bwibdnjpqyyuy"
+path="res://.godot/imported/ShortHair.png-0da384a63ee639c8ac6427c42fd9877d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Player/MC_LongHair_IceCream_Spritesheet_.png"
-dest_files=["res://.godot/imported/MC_LongHair_IceCream_Spritesheet_.png-b9b3ac1eeb3f564dea466b96f2ae11b0.ctex"]
+source_file="res://Entities/Player/ShortHair.png"
+dest_files=["res://.godot/imported/ShortHair.png-0da384a63ee639c8ac6427c42fd9877d.ctex"]
 
 [params]
 

@@ -9,8 +9,19 @@ var can_move = true # added to pause movement when interacting with roommates
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 func _ready() -> void:
+	choose_sprite()
+	
+func choose_sprite() -> void:
 	if clothing == "home":
-		sprite_2d.texture = preload("res://Entities/Player/MC_ShortHair_Home_Spritesheet.png")
+		if GlobalVariables.style == 0:
+			sprite_2d.texture = preload("res://Entities/Player/MC_ShortHair_Home_Spritesheet.png")
+		else:
+			sprite_2d.texture = preload("res://Entities/Player/MC_LongHair_Home_Spritesheet.png")
+	else:
+		if GlobalVariables.style == 0:
+			sprite_2d.texture = preload("res://Entities/Player/MC_ShortHair_IceCream_Spritesheet.png")
+		else:
+			sprite_2d.texture = preload("res://Entities/Player/MC_LongHair_IceCream_Spritesheet.png")
 
 func _physics_process(_delta):
 	# Move
