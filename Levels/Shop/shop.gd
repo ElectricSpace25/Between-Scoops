@@ -15,16 +15,28 @@ func _ready() -> void:
 			cherries_tub.queue_free()
 		2:
 			# 4 flavors
+			mint_tub.visible = true
 			lemon_tub.queue_free()
 			sprinkles_tub.queue_free()
 			cherries_tub.queue_free()
 		3:
 			# 4 flavors, 1 topping
+			mint_tub.visible = true
+			sprinkles_tub.visible = true
 			lemon_tub.queue_free()
 			cherries_tub.queue_free()
 		4:
 			# 5 flavors, 1 topping
+			mint_tub.visible = true
+			sprinkles_tub.visible = true
+			lemon_tub.visible = true
 			cherries_tub.queue_free()
+		5:
+			# 5 flavors, 2 toppings
+			mint_tub.visible = true
+			sprinkles_tub.visible = true
+			lemon_tub.visible = true
+			cherries_tub.visible = true
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("cheat_next_day"):

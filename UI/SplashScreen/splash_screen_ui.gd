@@ -19,7 +19,7 @@ extends Control
 func _ready() -> void:
 	# Only show splash screen on day 1
 	if GlobalVariables.day == 1:
-		panel.visible = true
+		visible = true
 		player.can_move = false
 	else:
 		panel.queue_free()

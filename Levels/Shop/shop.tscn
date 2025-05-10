@@ -82,18 +82,22 @@ position = Vector2(208, 80)
 flavor = 2
 
 [node name="MintTub" parent="." instance=ExtResource("4_4ak0b")]
+visible = false
 position = Vector2(176, 80)
 flavor = 3
 
 [node name="LemonTub" parent="." instance=ExtResource("4_4ak0b")]
+visible = false
 position = Vector2(144, 80)
 flavor = 4
 
 [node name="SprinklesTub" parent="." instance=ExtResource("6_8nawl")]
+visible = false
 z_index = 1
 position = Vector2(144, 144)
 
 [node name="CherriesTub" parent="." instance=ExtResource("6_8nawl")]
+visible = false
 z_index = 1
 position = Vector2(112, 144)
 type = 1
@@ -147,6 +151,7 @@ label_settings = SubResource("LabelSettings_doipd")
 script = ExtResource("12_gb566")
 
 [node name="SplashScreenUI" parent="CanvasLayer" instance=ExtResource("10_dlm8n")]
+visible = false
 
 [node name="SummaryScreenUI" parent="CanvasLayer" instance=ExtResource("11_4cypd")]
 
