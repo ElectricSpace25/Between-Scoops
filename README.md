@@ -1,12 +1,11 @@
 # Between Scoops
 ![img](https://github.com/user-attachments/assets/63cdf7f8-bec6-41a9-bd42-c8432fdba3b6)
 
-This game was created by Yara Studer (me) and Claudia Lihar (@claudiflower) in Godot as a final project for a college Game Design class.
+A short game created by Yara Studer (me) and Claudia Lihar (@claudiflower) in Godot as a final project for a college Game Design class.
 
-Serve customers randomized ice cream orders before they run out of patience. Return home after completing your shift and chat with your roommates. The game takes place over the course of five days (Monday to Friday), with each day adding a new flavor or topping and increasing the difficulty of the game. If you manage to pay your rent by Friday, you might get a special surprise! But if you don't...
+Serve customers their randomized ice cream orders before they run out of patience. Return home after completing your shift and chat with your roommates. The game takes place over the course of five days (Monday to Friday), with each day adding a new flavor or topping and increasing the difficulty of the game. If you manage to pay your rent by Friday, you might get a special surprise! But if you don't...
 
-Play now on itch.io!
-electricspace.itch.io/between-scoops
+[Play now on itch.io!](electricspace.itch.io/between-scoops)
 
 # Credits
 All assets were drawn by Claudia.
